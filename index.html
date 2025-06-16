@@ -5,6 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1" />
 <meta name="theme-color" content="#8B0000" /> <!-- Updated theme color to dark red -->
 <title>The Perfect Vacation - Exceptional Tours & Experiences</title>
+
+<!-- Canonical URL for SEO: Replace with the actual URL of this page -->
+<link rel="canonical" href="https://www.yourdomain.com/the-perfect-vacation-home-page" />
+
+<!-- Meta Description for SEO -->
+<meta name="description" content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
+
+<!-- Open Graph Meta Tags for Social Media Sharing -->
+<meta property="og:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
+<meta property="og:description" content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.yourdomain.com/the-perfect-vacation-home-page" />
+<meta property="og:image" content="https://www.yourdomain.com/assets/images/hero-image-og.jpg" /> <!-- Replace with a relevant image for social sharing -->
+<meta property="og:site_name" content="The Perfect Vacation" />
+
+<!-- Twitter Card Meta Tags for Twitter Sharing -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
+<meta name="twitter:description" content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
+<meta name="twitter:image" content="https://www.yourdomain.com/assets/images/hero-image-twitter.jpg" /> <!-- Replace with a relevant image for Twitter sharing -->
+
+
 <!-- Using Google Fonts for Inter -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <!-- Material Icons for icons (e.g., star, menu) -->
@@ -209,6 +231,26 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
+
+  /* Carousel specific styles */
+  .tours-carousel {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scroll-snap-type: x mandatory; /* Snap to tour cards */
+    gap: 2rem;
+    padding-bottom: 1rem; /* Space for scrollbar if visible */
+    margin-bottom: 1rem; /* Ensure space below carousel */
+  }
+  /* Hide scrollbar for aesthetic purposes */
+  .tours-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .tours-carousel {
+    scrollbar-width: none; /* Firefox */
+  }
+
   .tour-card {
     background: #FFFFFF; /* White background for tour cards */
     border-radius: 16px;
@@ -217,7 +259,11 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 auto; /* Prevent cards from stretching in carousel */
+    width: 300px; /* Fixed width for carousel items */
+    scroll-snap-align: start; /* Snap items to the start */
   }
+
   /* When the card itself is a link (for "All Tours") */
   .tour-card.as-link {
     display: contents; /* Allows the anchor to contain the entire card while preserving layout */
@@ -300,7 +346,7 @@
     font-size: 1.15rem;
     color: #8B0000; /* Dark red for price */
   }
-  .book-btn { /* For "Top Tours" section */
+  .book-btn { /* For "Top Tours" section and now "Exclusive Tours" */
     margin-top: 1rem;
     background-color: #8B0000; /* Dark red button */
     color: white;
@@ -528,6 +574,98 @@
   .mobile-nav.show {
     display: flex;
   }
+
+  /* Exclusive Tours Section specific styles */
+  .exclusive-tours-section .tours-grid {
+      display: flex; /* Override grid for horizontal scroll */
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      gap: 2rem;
+      padding-bottom: 1rem; /* Space for scrollbar if visible */
+  }
+
+  .exclusive-tours-section .tours-grid::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+  }
+  .exclusive-tours-section .tours-grid {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+
+  .exclusive-tours-section .tour-card {
+    flex: 0 0 300px; /* Fixed width for each card in the carousel */
+    scroll-snap-align: start; /* Snap items to the start of the container */
+    background: #1A1A1A; /* Dark background for exclusive tours */
+    color: #FFFFFF; /* White text on dark background */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5); /* More prominent shadow */
+  }
+  .exclusive-tours-section .tour-card .tour-title {
+    color: #FFFFFF; /* Ensure white title on dark card */
+  }
+  .exclusive-tours-section .tour-card .tour-desc {
+    color: #CCCCCC; /* Lighter grey description on dark card */
+  }
+  .exclusive-tours-section .tour-card .tour-rating,
+  .exclusive-tours-section .tour-card .tour-rating .material-icons,
+  .exclusive-tours-section .tour-card .tour-price {
+    color: #FFD700; /* Golden yellow for rating/price on dark card to stand out */
+  }
+  .exclusive-tours-section .tour-card .book-btn {
+    background-color: #8B0000; /* Dark red button */
+    color: #FFFFFF; /* White text on button */
+  }
+  .exclusive-tours-section .tour-card .book-btn:hover,
+  .exclusive-tours-section .tour-card .book-btn:focus {
+    background-color: #CC0000; /* Brighter red on hover */
+  }
+
+  /* Our Partners Section */
+  section.our-partners {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    text-align: center;
+    background-color: #F8F8F8; /* Light background */
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  }
+  section.our-partners h2 {
+    color: #8B0000;
+    margin-bottom: 2rem;
+  }
+  .partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .partner-logos img {
+    max-width: 150px;
+    height: auto;
+    filter: grayscale(80%); /* Make logos grayscale to fit theme */
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+  .partner-logos img:hover {
+    filter: grayscale(0%); /* Color on hover */
+    opacity: 1;
+  }
+  .google-reviews {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .google-reviews .material-icons {
+    color: #8B0000; /* Dark red stars */
+    font-size: 1.5rem;
+  }
 </style>
 </head>
 <body>
@@ -539,7 +677,8 @@
   </button>
   <nav class="primary-nav" role="navigation" aria-label="Primary navigation">
     <a href="#tours">Top Tours</a>
-    <a href="#all-tours">All Tours</a> <!-- Added link to new section -->
+    <a href="#all-tours">All Tours</a>
+    <a href="#exclusive-tours">Exclusive Tours</a> <!-- New nav link -->
     <a href="#expect">What to Expect</a>
     <a href="#faq">FAQs</a>
     <a href="blog/index.html">blogs</a>
@@ -548,7 +687,8 @@
 </header>
 <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile menu">
   <a href="#tours">Top Tours</a>
-    <a href="#all-tours">All Tours</a> <!-- Added link to new section -->
+    <a href="#all-tours">All Tours</a>
+    <a href="#exclusive-tours">Exclusive Tours</a> <!-- New nav link -->
   <a href="#expect">What to Expect</a>
   <a href="#faq">FAQs</a>
   <a href="#contact">Contact</a>
@@ -564,11 +704,11 @@
 <section id="tours" class="tours" aria-label="Top Tours">
   <h2>Top Tours</h2>
   <div class="tours-grid">
-    <article class="tour-card" tabindex="0" aria-describedby="desc-tour1" role="region">
-      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Paris+City+Tour" alt="Overview photo of Paris City Tour" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+    <article class="tour-card" tabindex="0" aria-describedby="desc-tour-sainte-chapelle-notre-dame" role="region">
+      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Paris+City+Tour" alt="Sainte Chapelle and Notre Dame" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
       <div class="tour-content">
         <h3 class="tour-title">Paris City Tour</h3>
-        <p id="desc-tour1" class="tour-desc">Enjoy a comprehensive guided experience through Paris's renowned landmarks, from the Eiffel Tower to charming hidden streets.</p>
+        <p id="desc-tour-sainte-chapelle-notre-dame" class="tour-desc">Enjoy a comprehensive guided experience through Paris's renowned landmarks.</p>
         <div class="tour-meta" aria-label="Rating and price details">
           <div class="tour-rating" aria-label="Rating: 5 out of 5 stars">
             5.0 <span class="material-icons" aria-hidden="true">star</span>
@@ -576,15 +716,15 @@
           </div>
           <div class="tour-price" aria-label="Price from 99 US dollars">$99</div>
         </div>
-        <button class="book-btn" aria-label="Book Paris City Tour now" onclick="alert('Book Now button for Paris City Tour - integrate Bokun code here')">Book Now</button>
+        <button class="book-btn" aria-label="Book Paris City Tour now">Book Now</button>
       </div>
     </article>
 
-    <article class="tour-card" tabindex="0" aria-describedby="desc-tour2" role="region">
-      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Eiffel+Tower+Climb" alt="Eiffel Tower tour photo" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+    <article class="tour-card" tabindex="0" aria-describedby="desc-tour-eiffel-elevator" role="region">
+      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Eiffel+Tower+Climb" alt="Eiffel Tower tour photo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
       <div class="tour-content">
         <h3 class="tour-title">Eiffel Tower Climb</h3>
-        <p id="desc-tour2" class="tour-desc">Experience breathtaking panoramic views as you ascend Paris’s iconic symbol, learning its history along the way.</p>
+        <p id="desc-tour-eiffel-elevator" class="tour-desc">Experience breathtaking views as you ascend Paris’s iconic symbol.</p>
         <div class="tour-meta" aria-label="Rating and price details">
           <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
             4.8 <span class="material-icons" aria-hidden="true">star</span>
@@ -592,15 +732,15 @@
           </div>
           <div class="tour-price" aria-label="Price from 120 US dollars">$120</div>
         </div>
-        <button class="book-btn" aria-label="Book Eiffel Tower Climb now" onclick="alert('Book Now button for Eiffel Tower Climb - integrate Bokun code here')">Book Now</button>
+        <button class="book-btn" aria-label="Book Eiffel Tower Climb now">Book Now</button>
       </div>
     </article>
 
-    <article class="tour-card" tabindex="0" aria-describedby="desc-tour3" role="region">
-      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Louvre+Museum+Tour" alt="Louvre Museum tour photo" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+    <article class="tour-card" tabindex="0" aria-describedby="desc-tour-louvre" role="region">
+      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Louvre+Museum+Tour" alt="Louvre Museum tour photo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
       <div class="tour-content">
         <h3 class="tour-title">Louvre Museum Tour</h3>
-        <p id="desc-tour3" class="tour-desc">Skip the queues and discover world-renowned masterpieces with our expert-guided museum tours.</p>
+        <p id="desc-tour-louvre" class="tour-desc">Skip the queues and discover masterpieces with our curated museum tours.</p>
         <div class="tour-meta" aria-label="Rating and price details">
           <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
             4.9 <span class="material-icons" aria-hidden="true">star</span>
@@ -608,20 +748,19 @@
           </div>
           <div class="tour-price" aria-label="Price from 110 US dollars">$110</div>
         </div>
-        <button class="book-btn" aria-label="Book Louvre Museum Tour now" onclick="alert('Book Now button for Louvre Museum Tour - integrate Bokun code here')">Book Now</button>
+        <button class="book-btn" aria-label="Book Louvre Museum Tour now">Book Now</button>
       </div>
     </article>
   </div>
 </section>
 
-<!-- New: All Tours Section -->
+<!-- Existing All Tours Section (remains as clickable cards) -->
 <section id="all-tours" class="tours" aria-label="All Available Tours">
   <h2>All Tours</h2>
   <div class="tours-grid">
-    <!-- Tour Card 1 (now a link) -->
     <article class="tour-card as-link" tabindex="0" role="region">
       <a href="tour-details.html?tour=romantic-seine-cruise" aria-label="View details for Romantic Seine Cruise">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Romantic+Seine+Cruise" alt="Couple on a romantic Seine River cruise" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Romantic+Seine+Cruise" alt="Couple on a romantic Seine River cruise" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
         <div class="tour-content">
           <h3 class="tour-title">Romantic Seine Cruise</h3>
           <p class="tour-desc">Glide along the enchanting Seine River and witness Paris's illuminated landmarks.</p>
@@ -632,15 +771,13 @@
             </div>
             <div class="tour-price" aria-label="Price from 75 US dollars">$75</div>
           </div>
-          <!-- Book Now button removed here -->
         </div>
       </a>
     </article>
 
-    <!-- Tour Card 2 (now a link) -->
     <article class="tour-card as-link" tabindex="0" role="region">
       <a href="tour-details.html?tour=montmartre-walking-tour" aria-label="View details for Montmartre Walking Tour">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Montmartre+Walking+Tour" alt="Artists painting in Montmartre street" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Montmartre+Walking+Tour" alt="Artists painting in Montmartre street" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
         <div class="tour-content">
           <h3 class="tour-title">Montmartre Walking Tour</h3>
           <p class="tour-desc">Explore the bohemian streets of Montmartre, Sacré-Cœur Basilica, and local artist studios.</p>
@@ -651,15 +788,13 @@
             </div>
             <div class="tour-price" aria-label="Price from 55 US dollars">$55</div>
           </div>
-          <!-- Book Now button removed here -->
         </div>
       </a>
     </article>
 
-    <!-- Tour Card 3 (now a link) -->
     <article class="tour-card as-link" tabindex="0" role="region">
       <a href="tour-details.html?tour=versailles-day-trip" aria-label="View details for Versailles Day Trip">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Versailles+Day+Trip" alt="Palace of Versailles gardens" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Versailles+Day+Trip" alt="Palace of Versailles gardens" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
         <div class="tour-content">
           <h3 class="tour-title">Versailles Day Trip</h3>
           <p class="tour-desc">Journey to the opulent Palace of Versailles and its magnificent gardens, a royal escape.</p>
@@ -670,15 +805,13 @@
             </div>
             <div class="tour-price" aria-label="Price from 180 US dollars">$180</div>
           </div>
-          <!-- Book Now button removed here -->
         </div>
       </a>
     </article>
 
-    <!-- Tour Card 4 (now a link) -->
     <article class="tour-card as-link" tabindex="0" role="region">
       <a href="tour-details.html?tour=parisian-food-walking-tour" aria-label="View details for Parisian Food Walking Tour">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Food+Walking+Tour" alt="French pastries on a food tour" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Food+Walking+Tour" alt="French pastries on a food tour" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
         <div class="tour-content">
           <h3 class="tour-title">Parisian Food Walking Tour</h3>
           <p class="tour-desc">Savor the flavors of Paris with a guided culinary journey through local markets and bakeries.</p>
@@ -689,15 +822,13 @@
             </div>
             <div class="tour-price" aria-label="Price from 90 US dollars">$90</div>
           </div>
-          <!-- Book Now button removed here -->
         </div>
       </a>
     </article>
 
-    <!-- Tour Card 5 (now a link) -->
     <article class="tour-card as-link" tabindex="0" role="region">
       <a href="tour-details.html?tour=paris-catacombs-exclusive" aria-label="View details for Paris Catacombs Exclusive">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Catacombs+Tour" alt="Skulls and bones in Paris Catacombs" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Catacombs+Tour" alt="Skulls and bones in Paris Catacombs" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
         <div class="tour-content">
           <h3 class="tour-title">Paris Catacombs Exclusive</h3>
           <p class="tour-desc">Venture into the mysterious underground world of Paris's catacombs with skip-the-line access.</p>
@@ -708,15 +839,13 @@
             </div>
             <div class="tour-price" aria-label="Price from 65 US dollars">$65</div>
           </div>
-          <!-- Book Now button removed here -->
         </div>
       </a>
     </article>
 
-    <!-- Tour Card 6 (now a link) -->
     <article class="tour-card as-link" tabindex="0" role="region">
       <a href="tour-details.html?tour=d-day-normandy-beaches" aria-label="View details for D-Day Normandy Beaches Day Trip">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=D-Day+Normandy+Tour" alt="D-Day Normandy Beach Memorial" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=D-Day+Normandy+Tour" alt="D-Day Normandy Beach Memorial" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
         <div class="tour-content">
           <h3 class="tour-title">D-Day Normandy Beaches Day Trip</h3>
           <p class="tour-desc">A moving and informative full-day tour to the historic D-Day landing beaches from Paris.</p>
@@ -727,9 +856,158 @@
             </div>
             <div class="tour-price" aria-label="Price from 250 US dollars">$250</div>
           </div>
-          <!-- Book Now button removed here -->
         </div>
       </a>
+    </article>
+  </div>
+</section>
+
+<!-- New: Exclusive Tours Section (Carousel) -->
+<section id="exclusive-tours" class="tours exclusive-tours-section" aria-label="Exclusive Tours">
+  <h2>Exclusive Tours</h2>
+  <div class="tours-grid tours-carousel">
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-sainte-chapelle-notre-dame" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Sainte+Chapelle+Notre+Dame" alt="Sainte Chapelle and Notre Dame" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour</h3>
+        <p id="desc-exclusive-sainte-chapelle-notre-dame" class="tour-desc">Marvel at stained glass and explore Notre Dame's exterior. Skip the line!</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
+            4.9 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(1153 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 46 US dollars">$46</div>
+        </div>
+        <button class="book-btn" aria-label="Book Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour now" onclick="alert('Book Now button for Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour')">Book Now</button>
+      </div>
+    </article>
+
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-notre-dame-crypt" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Crypt" alt="Notre Dame and Crypt" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Notre Dame Paris outdoor Tour with Crypt Entry</h3>
+        <p id="desc-exclusive-notre-dame-crypt" class="tour-desc">Explore Notre Dame's exterior, then delve into Paris's ancient crypts.</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 5.0 out of 5 stars">
+            5.0 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(1153 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 46 US dollars">$46</div>
+        </div>
+        <button class="book-btn" aria-label="Book Notre Dame Paris outdoor Tour with Crypt Entry now" onclick="alert('Book Now button for Notre Dame Paris outdoor Tour with Crypt Entry')">Book Now</button>
+      </div>
+    </article>
+
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-notre-dame-sainte-chapelle-conciergerie" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Sainte+Conciergerie" alt="Notre Dame, Sainte Chapelle, and Conciergerie" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie</h3>
+        <p id="desc-exclusive-notre-dame-sainte-chapelle-conciergerie" class="tour-desc">See Notre Dame, Sainte Chapelle's beauty, and Conciergerie's history.</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
+            4.8 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(980 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 55 US dollars">$55</div>
+        </div>
+        <button class="book-btn" aria-label="Book Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie now" onclick="alert('Book Now button for Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie')">Book Now</button>
+      </div>
+    </article>
+
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-notre-dame-outdoor" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Outdoor" alt="Notre Dame outdoor view" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Notre Dame Outdoor Walking Tour</h3>
+        <p id="desc-exclusive-notre-dame-outdoor" class="tour-desc">Discover the iconic Notre Dame Cathedral's exterior and its rich history.</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 4.7 out of 5 stars">
+            4.7 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(765 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 35 US dollars">$35</div>
+        </div>
+        <button class="book-btn" aria-label="Book Notre Dame Outdoor Walking Tour now" onclick="alert('Book Now button for Notre Dame Outdoor Walking Tour')">Book Now</button>
+      </div>
+    </article>
+
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-montmartre" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Montmartre+Sacre+Coeur" alt="Montmartre and Sacré-Cœur Basilica" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Paris: Montmartre Walking Tour with Sacré-Cœur Basilica</h3>
+        <p id="desc-exclusive-montmartre" class="tour-desc">Wander bohemian Montmartre, culminating at the stunning Sacré-Cœur Basilica.</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
+            4.9 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(920 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 55 US dollars">$55</div>
+        </div>
+        <button class="book-btn" aria-label="Book Paris: Montmartre Walking Tour with Sacré-Cœur Basilica now" onclick="alert('Book Now button for Paris: Montmartre Walking Tour with Sacré-Cœur Basilica')">Book Now</button>
+      </div>
+    </article>
+
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-eiffel-elevator" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Eiffel+Elevator+Tour" alt="Eiffel Tower from elevator" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Eiffel Tower Elevator Tour</h3>
+        <p id="desc-exclusive-eiffel-elevator" class="tour-desc">Ascend effortlessly to the Eiffel Tower's summit for breathtaking Parisian vistas.</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
+            4.8 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(4758 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 63 US dollars">$63</div>
+        </div>
+        <button class="book-btn" aria-label="Book Eiffel Tower Elevator Tour now" onclick="alert('Book Now button for Eiffel Tower Elevator Tour')">Book Now</button>
+      </div>
+    </article>
+
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-eiffel-climbing" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Eiffel+Climbing+Tour" alt="Eiffel Tower stairs" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Eiffel Tower Climbing Tour</h3>
+        <p id="desc-exclusive-eiffel-climbing" class="tour-desc">Conquer the Eiffel Tower by stairs for unique views and an active adventure.</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
+            4.9 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(2100 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 58 US dollars">$58</div>
+        </div>
+        <button class="book-btn" aria-label="Book Eiffel Tower Climbing Tour now" onclick="alert('Book Now button for Eiffel Tower Climbing Tour')">Book Now</button>
+      </div>
+    </article>
+
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-montparnasse" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Montparnasse+Tower" alt="Montparnasse Tower view" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Paris: Montparnasse Tower Entry Tour with Panoramic Views</h3>
+        <p id="desc-exclusive-montparnasse" class="tour-desc">Enjoy unparalleled 360-degree panoramic views of Paris from a modern marvel.</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 4.7 out of 5 stars">
+            4.7 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(630 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 25 US dollars">$25</div>
+        </div>
+        <button class="book-btn" aria-label="Book Paris: Montparnasse Tower Entry Tour with Panoramic Views now" onclick="alert('Book Now button for Paris: Montparnasse Tower Entry Tour with Panoramic Views')">Book Now</button>
+      </div>
+    </article>
+
+    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-arc-de-triomphe" role="region">
+      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Arc+de+Triomphe+Champs" alt="Arc de Triomphe and Champs-Élysées" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+      <div class="tour-content">
+        <h3 class="tour-title">Arc de Triomphe Entry With Champs-Élysées Walking Tour</h3>
+        <p id="desc-exclusive-arc-de-triomphe" class="tour-desc">Stroll along Champs-Élysées, then ascend the magnificent Arc de Triomphe.</p>
+        <div class="tour-meta" aria-label="Rating and price details">
+          <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
+            4.8 <span class="material-icons" aria-hidden="true">star</span>
+            <span class="tour-reviews">(1500 Reviews)</span>
+          </div>
+          <div class="tour-price" aria-label="Price from 40 US dollars">$40</div>
+        </div>
+        <button class="book-btn" aria-label="Book Arc de Triomphe Entry With Champs-Élysées Walking Tour now" onclick="alert('Book Now button for Arc de Triomphe Entry With Champs-Élysées Walking Tour')">Book Now</button>
+      </div>
     </article>
   </div>
 </section>
@@ -781,6 +1059,20 @@
   </div>
 </section>
 
+<!-- Our Partners Section -->
+<section id="our-partners" class="our-partners" aria-labelledby="partners-title">
+  <h2 id="partners-title">Our Trusted Partners</h2>
+  <div class="partner-logos">
+    <img src="https://placehold.co/150x80/EEEEEE/333333?text=Tripadvisor" alt="Tripadvisor Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Tripadvisor';" />
+    <img src="https://placehold.co/150x80/EEEEEE/333333?text=Viator" alt="Viator Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Viator';" />
+    <img src="https://placehold.co/150x80/EEEEEE/333333?text=GetYourGuide" alt="GetYourGuide Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=GetYourGuide';" />
+    <img src="https://placehold.co/150x80/EEEEEE/333333?text=Headout" alt="Headout Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Headout';" />
+  </div>
+  <p class="google-reviews" aria-label="Google review score and count">
+    Overall Rating: 5.0 <span class="material-icons" aria-hidden="true">star</span> Google (15,000+ Reviews)
+  </p>
+</section>
+
 <footer role="contentinfo">
   <div class="footer-container">
     <div class="footer-col" aria-label="Company info">
@@ -791,10 +1083,11 @@
       <h3>Quick Links</h3>
       <ul>
         <li><a href="#tours">Top Tours</a></li>
-        <li><a href="#all-tours">All Tours</a></li> <!-- Added link to new section -->
+        <li><a href="#all-tours">All Tours</a></li>
+        <li><a href="#exclusive-tours">Exclusive Tours</a></li> <!-- New footer link -->
         <li><a href="#expect">What to Expect</a></li>
         <li><a href="#faq">FAQs</a></li>
-        <a href="/blog/index.html">blogs</a>
+        <a href="blog/index.html">blogs</a>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
