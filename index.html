@@ -1,786 +1,1227 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1" />
-<meta name="theme-color" content="#8B0000" /> <!-- Updated theme color to dark red -->
-<title>The Perfect Vacation - Exceptional Tours & Experiences</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1" />
+  <meta name="theme-color" content="#8B0000" /> <!-- Updated theme color to dark red -->
+  <title>The Perfect Vacation - Exceptional Tours & Experiences</title>
 
-<!-- Canonical URL for SEO: Replace with the actual URL of this page -->
-<link rel="canonical" href="https://www.yourdomain.com/the-perfect-vacation-home-page" />
+  <!-- Canonical URL for SEO: Replace with the actual URL of this page -->
+  <link rel="canonical" href="https://www.yourdomain.com/the-perfect-vacation-home-page" />
 
-<!-- Meta Description for SEO -->
-<meta name="description" content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
+  <!-- Meta Description for SEO -->
+  <meta name="description"
+    content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
 
-<!-- Open Graph Meta Tags for Social Media Sharing -->
-<meta property="og:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
-<meta property="og:description" content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.yourdomain.com/the-perfect-vacation-home-page" />
-<meta property="og:image" content="https://www.yourdomain.com/assets/images/hero-image-og.jpg" /> <!-- Replace with a relevant image for social sharing -->
-<meta property="og:site_name" content="The Perfect Vacation" />
+  <!-- Open Graph Meta Tags for Social Media Sharing -->
+  <meta property="og:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
+  <meta property="og:description"
+    content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.yourdomain.com/the-perfect-vacation-home-page" />
+  <meta property="og:image" content="https://www.yourdomain.com/assets/images/hero-image-og.jpg" />
+  <!-- Replace with a relevant image for social sharing -->
+  <meta property="og:site_name" content="The Perfect Vacation" />
 
-<!-- Twitter Card Meta Tags for Twitter Sharing -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
-<meta name="twitter:description" content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
-<meta name="twitter:image" content="https://www.yourdomain.com/assets/images/hero-image-twitter.jpg" /> <!-- Replace with a relevant image for Twitter sharing -->
+  <!-- Twitter Card Meta Tags for Twitter Sharing -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
+  <meta name="twitter:description"
+    content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
+  <meta name="twitter:image" content="https://www.yourdomain.com/assets/images/hero-image-twitter.jpg" />
+  <!-- Replace with a relevant image for Twitter sharing -->
 
 
-<!-- Using Google Fonts for Inter -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<!-- Material Icons for icons (e.g., star, menu) -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Using Google Fonts for Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Material Icons for icons (e.g., star, menu) -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<style>
-  /* Reset & base */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body {
-    margin:0; padding:0;
-    font-family: 'Inter', sans-serif;
-    background-color: #FFFFFF; /* Changed to White background */
-    color: #333333; /* Darker text for readability on white */
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  a {
-    color: #8B0000; /* Dark red for links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  a:hover, a:focus {
-    color: #CC0000; /* Brighter red on hover */
-    outline: none;
-  }
-  h1,h2,h3,h4 {
-    margin-top: 0;
-    font-weight: 700;
-    color: #222222; /* Darker headings for readability on white */
-  }
-  h1 { font-size: 2.75rem; line-height: 1.1; }
-  h2 { font-size: 2rem; margin-bottom: 1rem; }
-  h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
-  p {
-    margin-bottom: 1rem;
-    color: #555555; /* Medium grey for paragraphs on white */
-  }
-  button {
-    font-family: 'Inter', sans-serif;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  button:focus {
-    outline: 3px solid #8B0000; /* Dark red outline on focus */
-    outline-offset: 2px;
-  }
-
-  /* Layout & Structure */
-  header {
-    background-color: #1A1A1A; /* Dark background for header (remains) */
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #333333; /* Subtle border for separation */
-  }
-  header .logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    user-select: none;
-    color: #FFFFFF; /* White logo text (remains) */
-  }
-  nav.primary-nav {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  nav.primary-nav a {
-    color: white; /* White links for header on dark background (remains) */
-    font-weight: 600;
-    padding: 0.4rem 0.5rem;
-  }
-  nav.primary-nav a:hover, nav.primary-nav a:focus {
-    background-color: rgba(139, 0, 0, 0.15); /* Transparent dark red for hover */
-    border-radius: 5px;
-  }
-
-  /* Hamburger menu for mobile */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white; /* White icon on dark header (remains) */
-    font-size: 2rem;
-  }
-  /* Mega menu container */
-  .mega-menu {
-    position: relative;
-  }
-  .mega-menu-content {
-    position: absolute;
-    top: 100%; left: 0;
-    background: #F8F8F8; /* Light background for mega menu */
-    color: #222222; /* Darker text */
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* Lighter shadow */
-    width: 100vw;
-    max-width: 1200px;
-    padding: 2rem 3rem;
-    display: none;
-    z-index: 1100;
-  }
-  .mega-menu:hover .mega-menu-content,
-  .mega-menu:focus-within .mega-menu-content {
-    display: flex;
-    gap: 3rem;
-  }
-  .mega-menu-column {
-    flex: 1;
-  }
-  .mega-menu-column h4 {
-    margin-bottom: 1rem;
-    color: #8B0000; /* Dark red for mega menu column headings */
-  }
-  .mega-menu-column ul {
-    list-style: none;
-    padding: 0; margin: 0;
-  }
-  .mega-menu-column ul li {
-    margin-bottom: 0.6rem;
-  }
-  .mega-menu-column ul li a {
-    color: #444444; /* Darker grey for mega menu links */
-    font-weight: 500;
-  }
-  .mega-menu-column ul li a:hover, .mega-menu-column ul li a:focus {
-    color: #CC0000; /* Brighter red on hover */
-    text-decoration: underline;
-  }
-  /* Featured Image for mega menu */
-  .mega-menu-column.image-box {
-    max-width: 320px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 15px rgba(139,0,0,0.2); /* Adjusted red shadow */
-  }
-  .mega-menu-column.image-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Hero */
-  .hero {
-    position: relative;
-    background-image: url('assets/images/eiffeltower.svg'); /* Placeholder, replace with actual image */
-    background-size: cover;
-    background-position: center;
-    padding: 6rem 2rem;
-    text-align: center;
-    color: white;
-    user-select: none;
-    overflow: hidden;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom right, rgba(139, 0, 0, 0.5), rgba(139, 0, 0, 0.1)); /* Lighter red gradient overlay for white background */
-    z-index: 0;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 10;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .hero-content h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Darker shadow for text */
-  }
-  .hero-content p {
-    font-weight: 600;
-    font-size: 1.25rem;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-  }
-
-  /* Tours Grid */
-  section.tours {
-    padding: 3rem 2rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  section.tours h2 {
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #8B0000; /* Dark red for section heading */
-    font-weight: 800;
-  }
-  .tours-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  /* Carousel specific styles */
-  .tours-carousel {
-    display: flex;
-    flex-wrap: nowrap; /* Prevent items from wrapping */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    scroll-snap-type: x mandatory; /* Snap to tour cards */
-    gap: 2rem;
-    padding-bottom: 1rem; /* Space for scrollbar if visible */
-    margin-bottom: 1rem; /* Ensure space below carousel */
-  }
-  /* Hide scrollbar for aesthetic purposes */
-  .tours-carousel::-webkit-scrollbar {
-    display: none;
-  }
-  .tours-carousel {
-    scrollbar-width: none; /* Firefox */
-  }
-
-  .tour-card {
-    background: #FFFFFF; /* White background for tour cards */
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Lighter shadow on white background */
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 0 0 auto; /* Prevent cards from stretching in carousel */
-    width: 300px; /* Fixed width for carousel items */
-    scroll-snap-align: start; /* Snap items to the start */
-  }
-
-  /* When the card itself is a link (for "All Tours") */
-  .tour-card.as-link {
-    display: contents; /* Allows the anchor to contain the entire card while preserving layout */
-  }
-  .tour-card.as-link > a {
-    display: flex; /* Apply flex to the anchor to maintain card structure */
-    flex-direction: column;
-    background: #FFFFFF; /* White background for linked tour cards */
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Lighter shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Ensure the link fills the grid item height */
-  }
-  .tour-card.as-link > a:hover, .tour-card.as-link > a:focus-within {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(139,0,0,0.3); /* Dark red shadow on hover, slightly less opaque */
-    outline: none;
-  }
-
-  .tour-card:hover, .tour-card:focus-within { /* This still applies to top tours */
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(139,0,0,0.3); /* Dark red shadow on hover, slightly less opaque */
-    outline: none;
-  }
-  .tour-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
-  .tour-card:hover img, .tour-card:focus-within img,
-  .tour-card.as-link > a:hover img, .tour-card.as-link > a:focus-within img {
-    transform: scale(1.05);
-  }
-  .tour-content {
-    padding: 1rem 1.5rem 2rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .tour-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #222222; /* Darker title for readability on white */
-  }
-  .tour-desc {
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: #555555; /* Medium grey description on white */
-    margin-bottom: 1rem;
-    flex-grow: 1;
-  }
-  .tour-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-  .tour-rating {
-    font-weight: 600;
-    color: #8B0000; /* Dark red for rating number */
-    display: flex;
-    align-items: center;
-  }
-  .tour-rating .material-icons {
-    font-size: 18px;
-    margin-left: 4px;
-    color: #8B0000; /* Dark red for stars */
-  }
-  .tour-reviews {
-    font-size: 0.85rem;
-    color: #888888; /* Darker grey for review count on white */
-  }
-  .tour-price {
-    font-weight: 800;
-    font-size: 1.15rem;
-    color: #8B0000; /* Dark red for price */
-  }
-  .book-btn { /* For "Top Tours" section and now "Exclusive Tours" */
-    margin-top: 1rem;
-    background-color: #8B0000; /* Dark red button */
-    color: white;
-    font-weight: 700;
-    padding: 12px 18px;
-    border-radius: 12px;
-    cursor: pointer;
-    text-align: center;
-    border: none;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-  .book-btn:hover, .book-btn:focus {
-    background-color: #CC0000; /* Brighter red on hover */
-    outline: none;
-  }
-
-  /* What to Expect Section */
-  section.expect {
-    background: #F8F8F8; /* Very light grey background for this section */
-    padding: 3rem 2rem;
-    max-width: 960px;
-    margin: 3rem auto;
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1); /* Lighter shadow */
-  }
-  section.expect h2 {
-    color: #8B0000; /* Dark red heading */
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .expect-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-    gap: 1.5rem;
-  }
-  .expect-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  .expect-icon {
-    flex-shrink: 0;
-    color: #8B0000; /* Dark red icons */
-    font-size: 32px;
-  }
-  .expect-text {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #555555; /* Medium grey text on white */
-  }
-
-  /* FAQ Section */
-  section.faq {
-    max-width: 900px;
-    margin: 3rem auto 6rem;
-    padding: 0 2rem;
-  }
-  section.faq h2 {
-    text-align: center;
-    font-weight: 800;
-    color: #8B0000; /* Dark red heading */
-    margin-bottom: 2rem;
-  }
-  .faq-item {
-    background: #FFFFFF; /* White background for FAQ items */
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Lighter shadow */
-    margin-bottom: 1rem;
-    overflow: hidden;
-  }
-  .faq-question {
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    position: relative;
-    font-weight: 700;
-    font-size: 1rem;
-    color: #222222; /* Darker text for questions on white */
-  }
-  .faq-question::after {
-    content: '+';
-    position: absolute;
-    right: 1.5rem;
-    font-size: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #8B0000; /* Dark red icon */
-  }
-  .faq-question[aria-expanded="true"]::after {
-    content: '-';
-    color: #CC0000; /* Brighter red when expanded */
-  }
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-    padding: 0 1.5rem;
-    font-weight: 500;
-    font-size: 0.9rem;
-    color: #555555; /* Medium grey text on white */
-  }
-  .faq-answer.open {
-    max-height: 1000px; /* Arbitrary large value to allow content to expand */
-    padding: 1rem 1.5rem;
-  }
-
-  /* Footer */
-  footer {
-    background-color: #000000; /* Pure black for footer (remains) */
-    color: #DDDDDD; /* Light grey for general footer text (remains) */
-    padding: 3rem 2rem 2rem;
-    user-select: none;
-  }
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-    gap: 2rem;
-  }
-  .footer-col h3 {
-    color: #8B0000; /* Dark red for footer headings */
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-  .footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .footer-col ul li {
-    margin-bottom: 0.6rem;
-  }
-  .footer-col ul li a {
-    color: #DDDDDD; /* Light grey for footer links (remains) */
-    font-weight: 500;
-    font-size: 0.9rem;
-  }
-  .footer-col ul li a:hover, .footer-col ul li a:focus {
-    color: #CC0000; /* Brighter red on hover */
-    text-decoration: underline;
-    outline: none;
-  }
-  .footer-social {
-    display: flex;
-    gap: 1rem;
-  }
-  .footer-social a {
-    color: #DDDDDD; /* Light grey for social icons (remains) */
-    font-size: 1.5rem;
-    transition: color 0.3s;
-  }
-  .footer-social a:hover, .footer-social a:focus {
-    color: #CC0000; /* Brighter red on hover */
-    outline: none;
-  }
-  .footer-newsletter input[type="email"] {
-    width: 100%;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    background-color: #333333; /* Darker input background (remains) */
-    color: #FFFFFF; /* White text input (remains) */
-  }
-  .footer-newsletter input[type="email"]::placeholder {
-    color: #AAAAAA; /* Grey placeholder text (remains) */
-  }
-  .footer-newsletter button {
-    background-color: #8B0000; /* Dark red button (remains) */
-    color: white;
-    font-weight: 700;
-    padding: 12px 18px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-  .footer-newsletter button:hover, .footer-newsletter button:focus {
-    background-color: #CC0000; /* Brighter red on hover */
-    outline: none;
-  }
-  .footer-bottom {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.85rem;
-    color: #AAAAAA; /* Grey copyright text (remains) */
-  }
-
-  /* Responsive Adjustments */
-  @media (max-width: 800px) {
-    nav.primary-nav {
-      display: none;
+  <style>
+    /* Reset & base */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
     }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #FFFFFF;
+      /* Changed to White background */
+      color: #333333;
+      /* Darker text for readability on white */
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #8B0000;
+      /* Dark red for links */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover,
+    a:focus {
+      color: #CC0000;
+      /* Brighter red on hover */
+      outline: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin-top: 0;
+      font-weight: 700;
+      color: #222222;
+      /* Darker headings for readability on white */
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #555555;
+      /* Medium grey for paragraphs on white */
+    }
+
+    button {
+      font-family: 'Inter', sans-serif;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:focus {
+      outline: 3px solid #8B0000;
+      /* Dark red outline on focus */
+      outline-offset: 2px;
+    }
+
+    /* Layout & Structure */
+    header {
+      background-color: #1A1A1A;
+      /* Dark background for header (remains) */
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #333333;
+      /* Subtle border for separation */
+    }
+
+    header .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      user-select: none;
+      color: #FFFFFF;
+      /* White logo text (remains) */
+    }
+
+    nav.primary-nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav.primary-nav a {
+      color: white;
+      /* White links for header on dark background (remains) */
+      font-weight: 600;
+      padding: 0.4rem 0.5rem;
+    }
+
+    nav.primary-nav a:hover,
+    nav.primary-nav a:focus {
+      background-color: rgba(139, 0, 0, 0.15);
+      /* Transparent dark red for hover */
+      border-radius: 5px;
+    }
+
+    /* Hamburger menu for mobile */
     .menu-toggle {
-      display: block;
-      color: white; /* White menu icon on dark header (remains) */
-      font-size: 2.4rem;
+      display: none;
       background: none;
       border: none;
+      color: white;
+      /* White icon on dark header (remains) */
+      font-size: 2rem;
     }
-    header.sticky-nav {
+
+    /* Mega menu container */
+    .mega-menu {
+      position: relative;
+    }
+
+    .mega-menu-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #F8F8F8;
+      /* Light background for mega menu */
+      color: #222222;
+      /* Darker text */
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      /* Lighter shadow */
+      width: 100vw;
+      max-width: 1200px;
+      padding: 2rem 3rem;
+      display: none;
+      z-index: 1100;
+    }
+
+    .mega-menu:hover .mega-menu-content,
+    .mega-menu:focus-within .mega-menu-content {
+      display: flex;
+      gap: 3rem;
+    }
+
+    .mega-menu-column {
+      flex: 1;
+    }
+
+    .mega-menu-column h4 {
+      margin-bottom: 1rem;
+      color: #8B0000;
+      /* Dark red for mega menu column headings */
+    }
+
+    .mega-menu-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mega-menu-column ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .mega-menu-column ul li a {
+      color: #444444;
+      /* Darker grey for mega menu links */
+      font-weight: 500;
+    }
+
+    .mega-menu-column ul li a:hover,
+    .mega-menu-column ul li a:focus {
+      color: #CC0000;
+      /* Brighter red on hover */
+      text-decoration: underline;
+    }
+
+    /* Featured Image for mega menu */
+    .mega-menu-column.image-box {
+      max-width: 320px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 15px rgba(139, 0, 0, 0.2);
+      /* Adjusted red shadow */
+    }
+
+    .mega-menu-column.image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background-image: url('assets/images/eiffeltower.svg');
+      /* Placeholder, replace with actual image */
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom right, rgba(139, 0, 0, 0.5), rgba(139, 0, 0, 0.1));
+      /* Lighter red gradient overlay for white background */
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      /* Darker shadow for text */
+    }
+
+    .hero-content p {
+      font-weight: 600;
+      font-size: 1.25rem;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Tours Grid */
+    section.tours {
+      padding: 3rem 2rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section.tours h2 {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #8B0000;
+      /* Dark red for section heading */
+      font-weight: 800;
+    }
+
+    .tours-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Carousel specific styles */
+    .tours-carousel {
+      display: flex;
+      flex-wrap: nowrap;
+      /* Prevent items from wrapping */
+      overflow-x: auto;
+      /* Enable horizontal scrolling */
+      -webkit-overflow-scrolling: touch;
+      /* Smooth scrolling on iOS */
+      scroll-snap-type: x mandatory;
+      /* Snap to tour cards */
+      gap: 2rem;
+      padding-bottom: 1rem;
+      /* Space for scrollbar if visible */
+      margin-bottom: 1rem;
+      /* Ensure space below carousel */
+    }
+
+    /* Hide scrollbar for aesthetic purposes */
+    .tours-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tours-carousel {
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    .tour-card {
+      background: #FFFFFF;
+      /* White background for tour cards */
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      /* Lighter shadow on white background */
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex: 0 0 auto;
+      /* Prevent cards from stretching in carousel */
+      width: 300px;
+      /* Fixed width for carousel items */
+      scroll-snap-align: start;
+      /* Snap items to the start */
+    }
+
+    /* When the card itself is a link (for "All Tours") */
+    .tour-card.as-link {
+      display: contents;
+      /* Allows the anchor to contain the entire card while preserving layout */
+    }
+
+    .tour-card.as-link>a {
+      display: flex;
+      /* Apply flex to the anchor to maintain card structure */
+      flex-direction: column;
+      background: #FFFFFF;
+      /* White background for linked tour cards */
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      /* Lighter shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      /* Ensure the link fills the grid item height */
+    }
+
+    .tour-card.as-link>a:hover,
+    .tour-card.as-link>a:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
+      /* Dark red shadow on hover, slightly less opaque */
+      outline: none;
+    }
+
+    .tour-card:hover,
+    .tour-card:focus-within {
+      /* This still applies to top tours */
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
+      /* Dark red shadow on hover, slightly less opaque */
+      outline: none;
+    }
+
+    .tour-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .tour-card:hover img,
+    .tour-card:focus-within img,
+    .tour-card.as-link>a:hover img,
+    .tour-card.as-link>a:focus-within img {
+      transform: scale(1.05);
+    }
+
+    .tour-content {
+      padding: 1rem 1.5rem 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
       justify-content: space-between;
     }
-  }
-  /* Mobile nav menu */
-  .mobile-nav {
-    display: none;
-    flex-direction: column;
-    background: #F8F8F8; /* Light background for mobile nav */
-    padding-bottom: 1rem; /* Add some padding at the bottom */
-  }
-  .mobile-nav a {
-    color: #222222; /* Darker text for mobile nav links on light background */
-    padding: 1rem 2rem;
-    border-top: 1px solid #DDDDDD; /* Lighter border */
-  }
-  .mobile-nav a:hover, .mobile-nav a:focus {
-    background-color: #EFEFEF; /* Slightly darker light on hover */
-    outline: none;
-  }
-  .mobile-nav.show {
-    display: flex;
-  }
 
-  /* Exclusive Tours Section specific styles */
-  .exclusive-tours-section .tours-grid {
-      display: flex; /* Override grid for horizontal scroll */
+    .tour-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #222222;
+      /* Darker title for readability on white */
+    }
+
+    .tour-desc {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #555555;
+      /* Medium grey description on white */
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .tour-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tour-rating {
+      font-weight: 600;
+      color: #8B0000;
+      /* Dark red for rating number */
+      display: flex;
+      align-items: center;
+    }
+
+    .tour-rating .material-icons {
+      font-size: 18px;
+      margin-left: 4px;
+      color: #8B0000;
+      /* Dark red for stars */
+    }
+
+    .tour-reviews {
+      font-size: 0.85rem;
+      color: #888888;
+      /* Darker grey for review count on white */
+    }
+
+    .tour-price {
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #8B0000;
+      /* Dark red for price */
+    }
+
+    .book-btn {
+      /* For "Top Tours" section and now "Exclusive Tours" */
+      margin-top: 1rem;
+      background-color: #8B0000;
+      /* Dark red button */
+      color: white;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: center;
+      border: none;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-btn:hover,
+    .book-btn:focus {
+      background-color: #CC0000;
+      /* Brighter red on hover */
+      outline: none;
+    }
+
+    /* What to Expect Section */
+    section.expect {
+      background: #F8F8F8;
+      /* Very light grey background for this section */
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 3rem auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      /* Lighter shadow */
+    }
+
+    section.expect h2 {
+      color: #8B0000;
+      /* Dark red heading */
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .expect-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .expect-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .expect-icon {
+      flex-shrink: 0;
+      color: #8B0000;
+      /* Dark red icons */
+      font-size: 32px;
+    }
+
+    .expect-text {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #555555;
+      /* Medium grey text on white */
+    }
+
+    /* FAQ Section */
+    section.faq {
+      max-width: 900px;
+      margin: 3rem auto 6rem;
+      padding: 0 2rem;
+    }
+
+    section.faq h2 {
+      text-align: center;
+      font-weight: 800;
+      color: #8B0000;
+      /* Dark red heading */
+      margin-bottom: 2rem;
+    }
+
+    .faq-item {
+      background: #FFFFFF;
+      /* White background for FAQ items */
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      /* Lighter shadow */
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      position: relative;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #222222;
+      /* Darker text for questions on white */
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 1.5rem;
+      font-size: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #8B0000;
+      /* Dark red icon */
+    }
+
+    .faq-question[aria-expanded="true"]::after {
+      content: '-';
+      color: #CC0000;
+      /* Brighter red when expanded */
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 1.5rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #555555;
+      /* Medium grey text on white */
+    }
+
+    .faq-answer.open {
+      max-height: 1000px;
+      /* Arbitrary large value to allow content to expand */
+      padding: 1rem 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      /* Pure black for footer (remains) */
+      color: #DDDDDD;
+      /* Light grey for general footer text (remains) */
+      padding: 3rem 2rem 2rem;
+      user-select: none;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-col h3 {
+      color: #8B0000;
+      /* Dark red for footer headings */
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      color: #DDDDDD;
+      /* Light grey for footer links (remains) */
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .footer-col ul li a:hover,
+    .footer-col ul li a:focus {
+      color: #CC0000;
+      /* Brighter red on hover */
+      text-decoration: underline;
+      outline: none;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-social a {
+      color: #DDDDDD;
+      /* Light grey for social icons (remains) */
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .footer-social a:hover,
+    .footer-social a:focus {
+      color: #CC0000;
+      /* Brighter red on hover */
+      outline: none;
+    }
+
+    .footer-newsletter input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      background-color: #333333;
+      /* Darker input background (remains) */
+      color: #FFFFFF;
+      /* White text input (remains) */
+    }
+
+    .footer-newsletter input[type="email"]::placeholder {
+      color: #AAAAAA;
+      /* Grey placeholder text (remains) */
+    }
+
+    .footer-newsletter button {
+      background-color: #8B0000;
+      /* Dark red button (remains) */
+      color: white;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .footer-newsletter button:hover,
+    .footer-newsletter button:focus {
+      background-color: #CC0000;
+      /* Brighter red on hover */
+      outline: none;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #AAAAAA;
+      /* Grey copyright text (remains) */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 800px) {
+      nav.primary-nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+        color: white;
+        /* White menu icon on dark header (remains) */
+        font-size: 2.4rem;
+        background: none;
+        border: none;
+      }
+
+      header.sticky-nav {
+        justify-content: space-between;
+      }
+    }
+
+    /* Mobile nav menu */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #F8F8F8;
+      /* Light background for mobile nav */
+      padding-bottom: 1rem;
+      /* Add some padding at the bottom */
+    }
+
+    .mobile-nav a {
+      color: #222222;
+      /* Darker text for mobile nav links on light background */
+      padding: 1rem 2rem;
+      border-top: 1px solid #DDDDDD;
+      /* Lighter border */
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      background-color: #EFEFEF;
+      /* Slightly darker light on hover */
+      outline: none;
+    }
+
+    .mobile-nav.show {
+      display: flex;
+    }
+
+    /* Exclusive Tours Section specific styles */
+    .exclusive-tours-section .tours-grid {
+      display: flex;
+      /* Override grid for horizontal scroll */
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
       gap: 2rem;
-      padding-bottom: 1rem; /* Space for scrollbar if visible */
-  }
+      padding-bottom: 1rem;
+      /* Space for scrollbar if visible */
+    }
 
-  .exclusive-tours-section .tours-grid::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Webkit browsers */
-  }
-  .exclusive-tours-section .tours-grid {
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-  }
+    .exclusive-tours-section .tours-grid::-webkit-scrollbar {
+      display: none;
+      /* Hide scrollbar for Webkit browsers */
+    }
 
-  .exclusive-tours-section .tour-card {
-    flex: 0 0 300px; /* Fixed width for each card in the carousel */
-    scroll-snap-align: start; /* Snap items to the start of the container */
-    background: #1A1A1A; /* Dark background for exclusive tours */
-    color: #FFFFFF; /* White text on dark background */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5); /* More prominent shadow */
-  }
-  .exclusive-tours-section .tour-card .tour-title {
-    color: #FFFFFF; /* Ensure white title on dark card */
-  }
-  .exclusive-tours-section .tour-card .tour-desc {
-    color: #CCCCCC; /* Lighter grey description on dark card */
-  }
-  .exclusive-tours-section .tour-card .tour-rating,
-  .exclusive-tours-section .tour-card .tour-rating .material-icons,
-  .exclusive-tours-section .tour-card .tour-price {
-    color: #FFD700; /* Golden yellow for rating/price on dark card to stand out */
-  }
-  .exclusive-tours-section .tour-card .book-btn {
-    background-color: #8B0000; /* Dark red button */
-    color: #FFFFFF; /* White text on button */
-  }
-  .exclusive-tours-section .tour-card .book-btn:hover,
-  .exclusive-tours-section .tour-card .book-btn:focus {
-    background-color: #CC0000; /* Brighter red on hover */
-  }
+    .exclusive-tours-section .tours-grid {
+      scrollbar-width: none;
+      /* Hide scrollbar for Firefox */
+    }
 
-  /* Our Partners Section */
-  section.our-partners {
-    padding: 3rem 2rem;
-    max-width: 1200px;
-    margin: 3rem auto;
-    text-align: center;
-    background-color: #F8F8F8; /* Light background */
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  }
-  section.our-partners h2 {
-    color: #8B0000;
-    margin-bottom: 2rem;
-  }
-  .partner-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  .partner-logos img {
-    max-width: 150px;
-    height: auto;
-    filter: grayscale(80%); /* Make logos grayscale to fit theme */
-    opacity: 0.7;
-    transition: filter 0.3s ease, opacity 0.3s ease;
-  }
-  .partner-logos img:hover {
-    filter: grayscale(0%); /* Color on hover */
-    opacity: 1;
-  }
-  .google-reviews {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #222222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  .google-reviews .material-icons {
-    color: #8B0000; /* Dark red stars */
-    font-size: 1.5rem;
-  }
-</style>
+    .exclusive-tours-section .tour-card {
+      flex: 0 0 300px;
+      /* Fixed width for each card in the carousel */
+      scroll-snap-align: start;
+      /* Snap items to the start of the container */
+      background: #1A1A1A;
+      /* Dark background for exclusive tours */
+      color: #FFFFFF;
+      /* White text on dark background */
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+      /* More prominent shadow */
+    }
+
+    .exclusive-tours-section .tour-card .tour-title {
+      color: #FFFFFF;
+      /* Ensure white title on dark card */
+    }
+
+    .exclusive-tours-section .tour-card .tour-desc {
+      color: #CCCCCC;
+      /* Lighter grey description on dark card */
+    }
+
+    .exclusive-tours-section .tour-card .tour-rating,
+    .exclusive-tours-section .tour-card .tour-rating .material-icons,
+    .exclusive-tours-section .tour-card .tour-price {
+      color: #FFD700;
+      /* Golden yellow for rating/price on dark card to stand out */
+    }
+
+    .exclusive-tours-section .tour-card .book-btn {
+      background-color: #8B0000;
+      /* Dark red button */
+      color: #FFFFFF;
+      /* White text on button */
+    }
+
+    .exclusive-tours-section .tour-card .book-btn:hover,
+    .exclusive-tours-section .tour-card .book-btn:focus {
+      background-color: #CC0000;
+      /* Brighter red on hover */
+    }
+
+    /* Our Partners Section */
+    section.our-partners {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 3rem auto;
+      text-align: center;
+      background-color: #F8F8F8;
+      /* Light background */
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    section.our-partners h2 {
+      color: #8B0000;
+      margin-bottom: 2rem;
+    }
+
+    .partner-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .partner-logos img {
+      max-width: 150px;
+      height: auto;
+      filter: grayscale(80%);
+      /* Make logos grayscale to fit theme */
+      opacity: 0.7;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+
+    .partner-logos img:hover {
+      filter: grayscale(0%);
+      /* Color on hover */
+      opacity: 1;
+    }
+
+    .google-reviews {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #222222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .google-reviews .material-icons {
+      color: #8B0000;
+      /* Dark red stars */
+      font-size: 1.5rem;
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="sticky-nav" role="banner">
-  <a href="#" class="logo" aria-label="The Perfect Vacation home">The Perfect Vacation</a>
-  <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
-    <span class="material-icons">menu</span>
-  </button>
-  <nav class="primary-nav" role="navigation" aria-label="Primary navigation">
+  <header class="sticky-nav" role="banner">
+    <a href="#" class="logo" aria-label="The Perfect Vacation home">The Perfect Vacation</a>
+    <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle menu">
+      <span class="material-icons">menu</span>
+    </button>
+    <nav class="primary-nav" role="navigation" aria-label="Primary navigation">
+      <a href="#tours">Top Tours</a>
+      <a href="#all-tours">All Tours</a>
+      <a href="#exclusive-tours">Exclusive Tours</a> <!-- New nav link -->
+      <a href="#expect">What to Expect</a>
+      <a href="#faq">FAQs</a>
+      <a href="blog/index.html">blogs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile menu">
     <a href="#tours">Top Tours</a>
     <a href="#all-tours">All Tours</a>
     <a href="#exclusive-tours">Exclusive Tours</a> <!-- New nav link -->
     <a href="#expect">What to Expect</a>
     <a href="#faq">FAQs</a>
-    <a href="blog/index.html">blogs</a>
     <a href="#contact">Contact</a>
   </nav>
-</header>
-<nav id="mobile-menu" class="mobile-nav" aria-label="Mobile menu">
-  <a href="#tours">Top Tours</a>
-    <a href="#all-tours">All Tours</a>
-    <a href="#exclusive-tours">Exclusive Tours</a> <!-- New nav link -->
-  <a href="#expect">What to Expect</a>
-  <a href="#faq">FAQs</a>
-  <a href="#contact">Contact</a>
-</nav>
 
-<section class="hero" aria-label="Hero banner introducing The Perfect Vacation">
-  <div class="hero-content">
-    <h1>Discover Your Dream Getaway</h1>
-    <p>Custom curated tours and unforgettable experiences await.</p>
-  </div>
-</section>
+  <section class="hero" aria-label="Hero banner introducing The Perfect Vacation">
+    <div class="hero-content">
+      <h1>Discover Your Dream Getaway</h1>
+      <p>Custom curated tours and unforgettable experiences await.</p>
+    </div>
+  </section>
 
-<section id="tours" class="tours" aria-label="Top Tours">
-  <h2>Top Tours</h2>
-  <div class="tours-grid">
-    <article class="tour-card" tabindex="0" aria-describedby="desc-tour-sainte-chapelle-notre-dame" role="region">
-      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Paris+City+Tour" alt="Sainte Chapelle and Notre Dame" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Paris City Tour</h3>
-        <p id="desc-tour-sainte-chapelle-notre-dame" class="tour-desc">Enjoy a comprehensive guided experience through Paris's renowned landmarks.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 5 out of 5 stars">
-            5.0 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(1,234 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 99 US dollars">$99</div>
-        </div>
-        <button class="book-btn" aria-label="Book Paris City Tour now">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card" tabindex="0" aria-describedby="desc-tour-eiffel-elevator" role="region">
-      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Eiffel+Tower+Climb" alt="Eiffel Tower tour photo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Eiffel Tower Climb</h3>
-        <p id="desc-tour-eiffel-elevator" class="tour-desc">Experience breathtaking views as you ascend Paris’s iconic symbol.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
-            4.8 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(856 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 120 US dollars">$120</div>
-        </div>
-        <button class="book-btn" aria-label="Book Eiffel Tower Climb now">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card" tabindex="0" aria-describedby="desc-tour-louvre" role="region">
-      <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Louvre+Museum+Tour" alt="Louvre Museum tour photo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Louvre Museum Tour</h3>
-        <p id="desc-tour-louvre" class="tour-desc">Skip the queues and discover masterpieces with our curated museum tours.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
-            4.9 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(1,010 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 110 US dollars">$110</div>
-        </div>
-        <button class="book-btn" aria-label="Book Louvre Museum Tour now">Book Now</button>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- Existing All Tours Section (remains as clickable cards) -->
-<section id="all-tours" class="tours" aria-label="All Available Tours">
-  <h2>All Tours</h2>
-  <div class="tours-grid">
-    <article class="tour-card as-link" tabindex="0" role="region">
-      <a href="tour-details.html?tour=romantic-seine-cruise" aria-label="View details for Romantic Seine Cruise">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Romantic+Seine+Cruise" alt="Couple on a romantic Seine River cruise" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+  <section id="tours" class="tours" aria-label="Top Tours">
+    <h2>Top Tours</h2>
+    <div class="tours-grid">
+      <article class="tour-card" tabindex="0" aria-describedby="desc-tour-sainte-chapelle-notre-dame" role="region">
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Paris+City+Tour" alt="Sainte Chapelle and Notre Dame"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
         <div class="tour-content">
-          <h3 class="tour-title">Romantic Seine Cruise</h3>
-          <p class="tour-desc">Glide along the enchanting Seine River and witness Paris's illuminated landmarks.</p>
+          <h3 class="tour-title">Paris City Tour</h3>
+          <p id="desc-tour-sainte-chapelle-notre-dame" class="tour-desc">Enjoy a comprehensive guided experience through
+            Paris's renowned landmarks.</p>
+          <div class="tour-meta" aria-label="Rating and price details">
+            <div class="tour-rating" aria-label="Rating: 5 out of 5 stars">
+              5.0 <span class="material-icons" aria-hidden="true">star</span>
+              <span class="tour-reviews">(1,234 Reviews)</span>
+            </div>
+            <div class="tour-price" aria-label="Price from 99 US dollars">$99</div>
+          </div>
+          <button class="book-btn" aria-label="Book Paris City Tour now">Book Now</button>
+        </div>
+      </article>
+
+      <article class="tour-card" tabindex="0" aria-describedby="desc-tour-eiffel-elevator" role="region">
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Eiffel+Tower+Climb" alt="Eiffel Tower tour photo"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+        <div class="tour-content">
+          <h3 class="tour-title">Eiffel Tower Climb</h3>
+          <p id="desc-tour-eiffel-elevator" class="tour-desc">Experience breathtaking views as you ascend Paris’s iconic
+            symbol.</p>
+          <div class="tour-meta" aria-label="Rating and price details">
+            <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
+              4.8 <span class="material-icons" aria-hidden="true">star</span>
+              <span class="tour-reviews">(856 Reviews)</span>
+            </div>
+            <div class="tour-price" aria-label="Price from 120 US dollars">$120</div>
+          </div>
+          <button class="book-btn" aria-label="Book Eiffel Tower Climb now">Book Now</button>
+        </div>
+      </article>
+
+      <article class="tour-card" tabindex="0" aria-describedby="desc-tour-louvre" role="region">
+        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Louvre+Museum+Tour" alt="Louvre Museum tour photo"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+        <div class="tour-content">
+          <h3 class="tour-title">Louvre Museum Tour</h3>
+          <p id="desc-tour-louvre" class="tour-desc">Skip the queues and discover masterpieces with our curated museum
+            tours.</p>
+          <div class="tour-meta" aria-label="Rating and price details">
+            <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
+              4.9 <span class="material-icons" aria-hidden="true">star</span>
+              <span class="tour-reviews">(1,010 Reviews)</span>
+            </div>
+            <div class="tour-price" aria-label="Price from 110 US dollars">$110</div>
+          </div>
+          <button class="book-btn" aria-label="Book Louvre Museum Tour now">Book Now</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Existing All Tours Section (remains as clickable cards) -->
+  <section id="all-tours" class="tours" aria-label="All Available Tours">
+    <h2>All Tours</h2>
+    <div class="tours-grid">
+      <article class="tour-card as-link" tabindex="0" role="region">
+        <a href="tour-details.html?tour=romantic-seine-cruise" aria-label="View details for Romantic Seine Cruise">
+          <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Romantic+Seine+Cruise"
+            alt="Couple on a romantic Seine River cruise" loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+          <div class="tour-content">
+            <h3 class="tour-title">Romantic Seine Cruise</h3>
+            <p class="tour-desc">Glide along the enchanting Seine River and witness Paris's illuminated landmarks.</p>
+            <div class="tour-meta" aria-label="Rating and price details">
+              <div class="tour-rating" aria-label="Rating: 4.7 out of 5 stars">
+                4.7 <span class="material-icons" aria-hidden="true">star</span>
+                <span class="tour-reviews">(678 Reviews)</span>
+              </div>
+              <div class="tour-price" aria-label="Price from 75 US dollars">$75</div>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="tour-card as-link" tabindex="0" role="region">
+        <a href="tour-details.html?tour=montmartre-walking-tour" aria-label="View details for Montmartre Walking Tour">
+          <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Montmartre+Walking+Tour"
+            alt="Artists painting in Montmartre street" loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+          <div class="tour-content">
+            <h3 class="tour-title">Montmartre Walking Tour</h3>
+            <p class="tour-desc">Explore the bohemian streets of Montmartre, Sacré-Cœur Basilica, and local artist
+              studios.</p>
+            <div class="tour-meta" aria-label="Rating and price details">
+              <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
+                4.9 <span class="material-icons" aria-hidden="true">star</span>
+                <span class="tour-reviews">(920 Reviews)</span>
+              </div>
+              <div class="tour-price" aria-label="Price from 55 US dollars">$55</div>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="tour-card as-link" tabindex="0" role="region">
+        <a href="tour-details.html?tour=versailles-day-trip" aria-label="View details for Versailles Day Trip">
+          <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Versailles+Day+Trip"
+            alt="Palace of Versailles gardens" loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+          <div class="tour-content">
+            <h3 class="tour-title">Versailles Day Trip</h3>
+            <p class="tour-desc">Journey to the opulent Palace of Versailles and its magnificent gardens, a royal
+              escape.</p>
+            <div class="tour-meta" aria-label="Rating and price details">
+              <div class="tour-rating" aria-label="Rating: 4.6 out of 5 stars">
+                4.6 <span class="material-icons" aria-hidden="true">star</span>
+                <span class="tour-reviews">(512 Reviews)</span>
+              </div>
+              <div class="tour-price" aria-label="Price from 180 US dollars">$180</div>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="tour-card as-link" tabindex="0" role="region">
+        <a href="tour-details.html?tour=parisian-food-walking-tour"
+          aria-label="View details for Parisian Food Walking Tour">
+          <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Food+Walking+Tour"
+            alt="French pastries on a food tour" loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+          <div class="tour-content">
+            <h3 class="tour-title">Parisian Food Walking Tour</h3>
+            <p class="tour-desc">Savor the flavors of Paris with a guided culinary journey through local markets and
+              bakeries.</p>
+            <div class="tour-meta" aria-label="Rating and price details">
+              <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
+                4.9 <span class="material-icons" aria-hidden="true">star</span>
+                <span class="tour-reviews">(750 Reviews)</span>
+              </div>
+              <div class="tour-price" aria-label="Price from 90 US dollars">$90</div>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="tour-card as-link" tabindex="0" role="region">
+        <a href="tour-details.html?tour=paris-catacombs-exclusive"
+          aria-label="View details for Paris Catacombs Exclusive">
+          <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Catacombs+Tour"
+            alt="Skulls and bones in Paris Catacombs" loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+          <div class="tour-content">
+            <h3 class="tour-title">Paris Catacombs Exclusive</h3>
+            <p class="tour-desc">Venture into the mysterious underground world of Paris's catacombs with skip-the-line
+              access.</p>
+            <div class="tour-meta" aria-label="Rating and price details">
+              <div class="tour-rating" aria-label="Rating: 4.7 out of 5 stars">
+                4.7 <span class="material-icons" aria-hidden="true">star</span>
+                <span class="tour-reviews">(432 Reviews)</span>
+              </div>
+              <div class="tour-price" aria-label="Price from 65 US dollars">$65</div>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="tour-card as-link" tabindex="0" role="region">
+        <a href="tour-details.html?tour=d-day-normandy-beaches"
+          aria-label="View details for D-Day Normandy Beaches Day Trip">
+          <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=D-Day+Normandy+Tour"
+            alt="D-Day Normandy Beach Memorial" loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+          <div class="tour-content">
+            <h3 class="tour-title">D-Day Normandy Beaches Day Trip</h3>
+            <p class="tour-desc">A moving and informative full-day tour to the historic D-Day landing beaches from
+              Paris.</p>
+            <div class="tour-meta" aria-label="Rating and price details">
+              <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
+                4.9 <span class="material-icons" aria-hidden="true">star</span>
+                <span class="tour-reviews">(890 Reviews)</span>
+              </div>
+              <div class="tour-price" aria-label="Price from 250 US dollars">$250</div>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- New: Exclusive Tours Section (Carousel) -->
+  <section id="exclusive-tours" class="tours exclusive-tours-section" aria-label="Exclusive Tours">
+    <h2>Exclusive Tours</h2>
+    <div class="tours-grid tours-carousel">
+      <article class="tour-card exclusive-tour-card" tabindex="0"
+        aria-describedby="desc-exclusive-sainte-chapelle-notre-dame" role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Sainte+Chapelle+Notre+Dame"
+          alt="Sainte Chapelle and Notre Dame" loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+        <div class="tour-content">
+          <h3 class="tour-title">Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour</h3>
+          <p id="desc-exclusive-sainte-chapelle-notre-dame" class="tour-desc">Marvel at stained glass and explore Notre
+            Dame's exterior. Skip the line!</p>
+          <div class="tour-meta" aria-label="Rating and price details">
+            <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
+              4.9 <span class="material-icons" aria-hidden="true">star</span>
+              <span class="tour-reviews">(1153 Reviews)</span>
+            </div>
+            <div class="tour-price" aria-label="Price from 46 US dollars">$46</div>
+          </div>
+          <button class="book-btn"
+            aria-label="Book Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour now"
+            onclick="alert('Book Now button for Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour')">Book
+            Now</button>
+        </div>
+      </article>
+
+      <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-notre-dame-crypt"
+        role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Crypt" alt="Notre Dame and Crypt"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+        <div class="tour-content">
+          <h3 class="tour-title">Notre Dame Paris outdoor Tour with Crypt Entry</h3>
+          <p id="desc-exclusive-notre-dame-crypt" class="tour-desc">Explore Notre Dame's exterior, then delve into
+            Paris's ancient crypts.</p>
+          <div class="tour-meta" aria-label="Rating and price details">
+            <div class="tour-rating" aria-label="Rating: 5.0 out of 5 stars">
+              5.0 <span class="material-icons" aria-hidden="true">star</span>
+              <span class="tour-reviews">(1153 Reviews)</span>
+            </div>
+            <div class="tour-price" aria-label="Price from 46 US dollars">$46</div>
+          </div>
+          <button class="book-btn" aria-label="Book Notre Dame Paris outdoor Tour with Crypt Entry now"
+            onclick="alert('Book Now button for Notre Dame Paris outdoor Tour with Crypt Entry')">Book Now</button>
+        </div>
+      </article>
+
+      <article class="tour-card exclusive-tour-card" tabindex="0"
+        aria-describedby="desc-exclusive-notre-dame-sainte-chapelle-conciergerie" role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Sainte+Conciergerie"
+          alt="Notre Dame, Sainte Chapelle, and Conciergerie" loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+        <div class="tour-content">
+          <h3 class="tour-title">Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie</h3>
+          <p id="desc-exclusive-notre-dame-sainte-chapelle-conciergerie" class="tour-desc">See Notre Dame, Sainte
+            Chapelle's beauty, and Conciergerie's history.</p>
+          <div class="tour-meta" aria-label="Rating and price details">
+            <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
+              4.8 <span class="material-icons" aria-hidden="true">star</span>
+              <span class="tour-reviews">(980 Reviews)</span>
+            </div>
+            <div class="tour-price" aria-label="Price from 55 US dollars">$55</div>
+          </div>
+          <button class="book-btn" aria-label="Book Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie now"
+            onclick="alert('Book Now button for Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie')">Book
+            Now</button>
+        </div>
+      </article>
+
+      <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-notre-dame-outdoor"
+        role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Outdoor" alt="Notre Dame outdoor view"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
+        <div class="tour-content">
+          <h3 class="tour-title">Notre Dame Outdoor Walking Tour</h3>
+          <p id="desc-exclusive-notre-dame-outdoor" class="tour-desc">Discover the iconic Notre Dame Cathedral's
+            exterior and its rich history.</p>
           <div class="tour-meta" aria-label="Rating and price details">
             <div class="tour-rating" aria-label="Rating: 4.7 out of 5 stars">
               4.7 <span class="material-icons" aria-hidden="true">star</span>
-              <span class="tour-reviews">(678 Reviews)</span>
+              <span class="tour-reviews">(765 Reviews)</span>
             </div>
-            <div class="tour-price" aria-label="Price from 75 US dollars">$75</div>
+            <div class="tour-price" aria-label="Price from 35 US dollars">$35</div>
           </div>
+          <button class="book-btn" aria-label="Book Notre Dame Outdoor Walking Tour now"
+            onclick="alert('Book Now button for Notre Dame Outdoor Walking Tour')">Book Now</button>
         </div>
-      </a>
-    </article>
+      </article>
 
-    <article class="tour-card as-link" tabindex="0" role="region">
-      <a href="tour-details.html?tour=montmartre-walking-tour" aria-label="View details for Montmartre Walking Tour">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Montmartre+Walking+Tour" alt="Artists painting in Montmartre street" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+      <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-montmartre"
+        role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Montmartre+Sacre+Coeur"
+          alt="Montmartre and Sacré-Cœur Basilica" loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
         <div class="tour-content">
-          <h3 class="tour-title">Montmartre Walking Tour</h3>
-          <p class="tour-desc">Explore the bohemian streets of Montmartre, Sacré-Cœur Basilica, and local artist studios.</p>
+          <h3 class="tour-title">Paris: Montmartre Walking Tour with Sacré-Cœur Basilica</h3>
+          <p id="desc-exclusive-montmartre" class="tour-desc">Wander bohemian Montmartre, culminating at the stunning
+            Sacré-Cœur Basilica.</p>
           <div class="tour-meta" aria-label="Rating and price details">
             <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
               4.9 <span class="material-icons" aria-hidden="true">star</span>
@@ -788,372 +1229,256 @@
             </div>
             <div class="tour-price" aria-label="Price from 55 US dollars">$55</div>
           </div>
+          <button class="book-btn" aria-label="Book Paris: Montmartre Walking Tour with Sacré-Cœur Basilica now"
+            onclick="alert('Book Now button for Paris: Montmartre Walking Tour with Sacré-Cœur Basilica')">Book
+            Now</button>
         </div>
-      </a>
-    </article>
+      </article>
 
-    <article class="tour-card as-link" tabindex="0" role="region">
-      <a href="tour-details.html?tour=versailles-day-trip" aria-label="View details for Versailles Day Trip">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Versailles+Day+Trip" alt="Palace of Versailles gardens" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+      <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-eiffel-elevator"
+        role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Eiffel+Elevator+Tour" alt="Eiffel Tower from elevator"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
         <div class="tour-content">
-          <h3 class="tour-title">Versailles Day Trip</h3>
-          <p class="tour-desc">Journey to the opulent Palace of Versailles and its magnificent gardens, a royal escape.</p>
+          <h3 class="tour-title">Eiffel Tower Elevator Tour</h3>
+          <p id="desc-exclusive-eiffel-elevator" class="tour-desc">Ascend effortlessly to the Eiffel Tower's summit for
+            breathtaking Parisian vistas.</p>
           <div class="tour-meta" aria-label="Rating and price details">
-            <div class="tour-rating" aria-label="Rating: 4.6 out of 5 stars">
-              4.6 <span class="material-icons" aria-hidden="true">star</span>
-              <span class="tour-reviews">(512 Reviews)</span>
+            <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
+              4.8 <span class="material-icons" aria-hidden="true">star</span>
+              <span class="tour-reviews">(4758 Reviews)</span>
             </div>
-            <div class="tour-price" aria-label="Price from 180 US dollars">$180</div>
+            <div class="tour-price" aria-label="Price from 63 US dollars">$63</div>
           </div>
+          <button class="book-btn" aria-label="Book Eiffel Tower Elevator Tour now"
+            onclick="alert('Book Now button for Eiffel Tower Elevator Tour')">Book Now</button>
         </div>
-      </a>
-    </article>
+      </article>
 
-    <article class="tour-card as-link" tabindex="0" role="region">
-      <a href="tour-details.html?tour=parisian-food-walking-tour" aria-label="View details for Parisian Food Walking Tour">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Food+Walking+Tour" alt="French pastries on a food tour" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+      <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-eiffel-climbing"
+        role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Eiffel+Climbing+Tour" alt="Eiffel Tower stairs"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
         <div class="tour-content">
-          <h3 class="tour-title">Parisian Food Walking Tour</h3>
-          <p class="tour-desc">Savor the flavors of Paris with a guided culinary journey through local markets and bakeries.</p>
+          <h3 class="tour-title">Eiffel Tower Climbing Tour</h3>
+          <p id="desc-exclusive-eiffel-climbing" class="tour-desc">Conquer the Eiffel Tower by stairs for unique views
+            and an active adventure.</p>
           <div class="tour-meta" aria-label="Rating and price details">
             <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
               4.9 <span class="material-icons" aria-hidden="true">star</span>
-              <span class="tour-reviews">(750 Reviews)</span>
+              <span class="tour-reviews">(2100 Reviews)</span>
             </div>
-            <div class="tour-price" aria-label="Price from 90 US dollars">$90</div>
+            <div class="tour-price" aria-label="Price from 58 US dollars">$58</div>
           </div>
+          <button class="book-btn" aria-label="Book Eiffel Tower Climbing Tour now"
+            onclick="alert('Book Now button for Eiffel Tower Climbing Tour')">Book Now</button>
         </div>
-      </a>
-    </article>
+      </article>
 
-    <article class="tour-card as-link" tabindex="0" role="region">
-      <a href="tour-details.html?tour=paris-catacombs-exclusive" aria-label="View details for Paris Catacombs Exclusive">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Catacombs+Tour" alt="Skulls and bones in Paris Catacombs" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+      <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-montparnasse"
+        role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Montparnasse+Tower" alt="Montparnasse Tower view"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
         <div class="tour-content">
-          <h3 class="tour-title">Paris Catacombs Exclusive</h3>
-          <p class="tour-desc">Venture into the mysterious underground world of Paris's catacombs with skip-the-line access.</p>
+          <h3 class="tour-title">Paris: Montparnasse Tower Entry Tour with Panoramic Views</h3>
+          <p id="desc-exclusive-montparnasse" class="tour-desc">Enjoy unparalleled 360-degree panoramic views of Paris
+            from a modern marvel.</p>
           <div class="tour-meta" aria-label="Rating and price details">
             <div class="tour-rating" aria-label="Rating: 4.7 out of 5 stars">
               4.7 <span class="material-icons" aria-hidden="true">star</span>
-              <span class="tour-reviews">(432 Reviews)</span>
+              <span class="tour-reviews">(630 Reviews)</span>
             </div>
-            <div class="tour-price" aria-label="Price from 65 US dollars">$65</div>
+            <div class="tour-price" aria-label="Price from 25 US dollars">$25</div>
           </div>
+          <button class="book-btn" aria-label="Book Paris: Montparnasse Tower Entry Tour with Panoramic Views now"
+            onclick="alert('Book Now button for Paris: Montparnasse Tower Entry Tour with Panoramic Views')">Book
+            Now</button>
         </div>
-      </a>
-    </article>
+      </article>
 
-    <article class="tour-card as-link" tabindex="0" role="region">
-      <a href="tour-details.html?tour=d-day-normandy-beaches" aria-label="View details for D-Day Normandy Beaches Day Trip">
-        <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=D-Day+Normandy+Tour" alt="D-Day Normandy Beach Memorial" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
+      <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-arc-de-triomphe"
+        role="region">
+        <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Arc+de+Triomphe+Champs"
+          alt="Arc de Triomphe and Champs-Élysées" loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
         <div class="tour-content">
-          <h3 class="tour-title">D-Day Normandy Beaches Day Trip</h3>
-          <p class="tour-desc">A moving and informative full-day tour to the historic D-Day landing beaches from Paris.</p>
+          <h3 class="tour-title">Arc de Triomphe Entry With Champs-Élysées Walking Tour</h3>
+          <p id="desc-exclusive-arc-de-triomphe" class="tour-desc">Stroll along Champs-Élysées, then ascend the
+            magnificent Arc de Triomphe.</p>
           <div class="tour-meta" aria-label="Rating and price details">
-            <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
-              4.9 <span class="material-icons" aria-hidden="true">star</span>
-              <span class="tour-reviews">(890 Reviews)</span>
+            <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
+              4.8 <span class="material-icons" aria-hidden="true">star</span>
+              <span class="tour-reviews">(1500 Reviews)</span>
             </div>
-            <div class="tour-price" aria-label="Price from 250 US dollars">$250</div>
+            <div class="tour-price" aria-label="Price from 40 US dollars">$40</div>
           </div>
+          <button class="book-btn" aria-label="Book Arc de Triomphe Entry With Champs-Élysées Walking Tour now"
+            onclick="alert('Book Now button for Arc de Triomphe Entry With Champs-Élysées Walking Tour')">Book
+            Now</button>
         </div>
-      </a>
-    </article>
-  </div>
-</section>
-
-<!-- New: Exclusive Tours Section (Carousel) -->
-<section id="exclusive-tours" class="tours exclusive-tours-section" aria-label="Exclusive Tours">
-  <h2>Exclusive Tours</h2>
-  <div class="tours-grid tours-carousel">
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-sainte-chapelle-notre-dame" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Sainte+Chapelle+Notre+Dame" alt="Sainte Chapelle and Notre Dame" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour</h3>
-        <p id="desc-exclusive-sainte-chapelle-notre-dame" class="tour-desc">Marvel at stained glass and explore Notre Dame's exterior. Skip the line!</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
-            4.9 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(1153 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 46 US dollars">$46</div>
-        </div>
-        <button class="book-btn" aria-label="Book Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour now" onclick="alert('Book Now button for Sainte Chapelle Skip The Line Entry + Notre Dame Outdoor Walking Tour')">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-notre-dame-crypt" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Crypt" alt="Notre Dame and Crypt" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Notre Dame Paris outdoor Tour with Crypt Entry</h3>
-        <p id="desc-exclusive-notre-dame-crypt" class="tour-desc">Explore Notre Dame's exterior, then delve into Paris's ancient crypts.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 5.0 out of 5 stars">
-            5.0 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(1153 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 46 US dollars">$46</div>
-        </div>
-        <button class="book-btn" aria-label="Book Notre Dame Paris outdoor Tour with Crypt Entry now" onclick="alert('Book Now button for Notre Dame Paris outdoor Tour with Crypt Entry')">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-notre-dame-sainte-chapelle-conciergerie" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Sainte+Conciergerie" alt="Notre Dame, Sainte Chapelle, and Conciergerie" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie</h3>
-        <p id="desc-exclusive-notre-dame-sainte-chapelle-conciergerie" class="tour-desc">See Notre Dame, Sainte Chapelle's beauty, and Conciergerie's history.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
-            4.8 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(980 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 55 US dollars">$55</div>
-        </div>
-        <button class="book-btn" aria-label="Book Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie now" onclick="alert('Book Now button for Notre Dame Outside Walking Tour + Saint Chapelle & Conciergerie')">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-notre-dame-outdoor" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Notre+Dame+Outdoor" alt="Notre Dame outdoor view" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Notre Dame Outdoor Walking Tour</h3>
-        <p id="desc-exclusive-notre-dame-outdoor" class="tour-desc">Discover the iconic Notre Dame Cathedral's exterior and its rich history.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.7 out of 5 stars">
-            4.7 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(765 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 35 US dollars">$35</div>
-        </div>
-        <button class="book-btn" aria-label="Book Notre Dame Outdoor Walking Tour now" onclick="alert('Book Now button for Notre Dame Outdoor Walking Tour')">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-montmartre" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Montmartre+Sacre+Coeur" alt="Montmartre and Sacré-Cœur Basilica" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Paris: Montmartre Walking Tour with Sacré-Cœur Basilica</h3>
-        <p id="desc-exclusive-montmartre" class="tour-desc">Wander bohemian Montmartre, culminating at the stunning Sacré-Cœur Basilica.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
-            4.9 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(920 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 55 US dollars">$55</div>
-        </div>
-        <button class="book-btn" aria-label="Book Paris: Montmartre Walking Tour with Sacré-Cœur Basilica now" onclick="alert('Book Now button for Paris: Montmartre Walking Tour with Sacré-Cœur Basilica')">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-eiffel-elevator" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Eiffel+Elevator+Tour" alt="Eiffel Tower from elevator" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Eiffel Tower Elevator Tour</h3>
-        <p id="desc-exclusive-eiffel-elevator" class="tour-desc">Ascend effortlessly to the Eiffel Tower's summit for breathtaking Parisian vistas.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
-            4.8 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(4758 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 63 US dollars">$63</div>
-        </div>
-        <button class="book-btn" aria-label="Book Eiffel Tower Elevator Tour now" onclick="alert('Book Now button for Eiffel Tower Elevator Tour')">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-eiffel-climbing" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Eiffel+Climbing+Tour" alt="Eiffel Tower stairs" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Eiffel Tower Climbing Tour</h3>
-        <p id="desc-exclusive-eiffel-climbing" class="tour-desc">Conquer the Eiffel Tower by stairs for unique views and an active adventure.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.9 out of 5 stars">
-            4.9 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(2100 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 58 US dollars">$58</div>
-        </div>
-        <button class="book-btn" aria-label="Book Eiffel Tower Climbing Tour now" onclick="alert('Book Now button for Eiffel Tower Climbing Tour')">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-montparnasse" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Montparnasse+Tower" alt="Montparnasse Tower view" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Paris: Montparnasse Tower Entry Tour with Panoramic Views</h3>
-        <p id="desc-exclusive-montparnasse" class="tour-desc">Enjoy unparalleled 360-degree panoramic views of Paris from a modern marvel.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.7 out of 5 stars">
-            4.7 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(630 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 25 US dollars">$25</div>
-        </div>
-        <button class="book-btn" aria-label="Book Paris: Montparnasse Tower Entry Tour with Panoramic Views now" onclick="alert('Book Now button for Paris: Montparnasse Tower Entry Tour with Panoramic Views')">Book Now</button>
-      </div>
-    </article>
-
-    <article class="tour-card exclusive-tour-card" tabindex="0" aria-describedby="desc-exclusive-arc-de-triomphe" role="region">
-      <img src="https://placehold.co/400x250/1A1A1A/FFD700?text=Arc+de+Triomphe+Champs" alt="Arc de Triomphe and Champs-Élysées" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1A1A1A/FFD700?text=Image+Unavailable';" />
-      <div class="tour-content">
-        <h3 class="tour-title">Arc de Triomphe Entry With Champs-Élysées Walking Tour</h3>
-        <p id="desc-exclusive-arc-de-triomphe" class="tour-desc">Stroll along Champs-Élysées, then ascend the magnificent Arc de Triomphe.</p>
-        <div class="tour-meta" aria-label="Rating and price details">
-          <div class="tour-rating" aria-label="Rating: 4.8 out of 5 stars">
-            4.8 <span class="material-icons" aria-hidden="true">star</span>
-            <span class="tour-reviews">(1500 Reviews)</span>
-          </div>
-          <div class="tour-price" aria-label="Price from 40 US dollars">$40</div>
-        </div>
-        <button class="book-btn" aria-label="Book Arc de Triomphe Entry With Champs-Élysées Walking Tour now" onclick="alert('Book Now button for Arc de Triomphe Entry With Champs-Élysées Walking Tour')">Book Now</button>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="expect" class="expect" aria-labelledby="expect-title">
-  <h2 id="expect-title">What to Expect</h2>
-  <div class="expect-list">
-    <div class="expect-item">
-      <span class="material-icons expect-icon" aria-hidden="true">check_circle</span>
-      <p class="expect-text">Carefully curated itineraries tailored to your interests.</p>
+      </article>
     </div>
-    <div class="expect-item">
-      <span class="material-icons expect-icon" aria-hidden="true">check_circle</span>
-      <p class="expect-text">Passionate guides that bring the destination to life.</p>
-    </div>
-    <div class="expect-item">
-      <span class="material-icons expect-icon" aria-hidden="true">check_circle</span>
-      <p class="expect-text">Convenience and peace of mind with comprehensive planning.</p>
-    </div>
-    <div class="expect-item">
-      <span class="material-icons expect-icon" aria-hidden="true">check_circle</span>
-      <p class="expect-text">Interactive experiences that connect you with locals.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="faq" class="faq" aria-labelledby="faq-title">
-  <h2 id="faq-title">Frequently Asked Questions</h2>
-
-  <div class="faq-item">
-    <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="q1">What are the must-see landmarks on your tours?</button>
-    <div class="faq-answer" id="faq1" role="region" aria-labelledby="q1" hidden>
-      <p>Our tours highlight iconic sites like the Eiffel Tower, Louvre Museum, Montmartre, and the Seine River cruise, plus hidden gems only locals know.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="q2">Are your tours suitable for families?</button>
-    <div class="faq-answer" id="faq2" role="region" aria-labelledby="q2" hidden>
-      <p>Yes! We offer family-friendly options with engaging activities for all ages, including kid-focused tours and flexible schedules.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="q3">When is the best time to book?</button>
-    <div class="faq-answer" id="faq3" role="region" aria-labelledby="q3" hidden>
-      <p>We recommend booking early for peak seasons from Spring through Fall to secure preferred dates and experiences.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Our Partners Section -->
-<section id="our-partners" class="our-partners" aria-labelledby="partners-title">
-  <h2 id="partners-title">Our Trusted Partners</h2>
-  <div class="partner-logos">
-    <img src="https://placehold.co/150x80/EEEEEE/333333?text=Tripadvisor" alt="Tripadvisor Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Tripadvisor';" />
-    <img src="https://placehold.co/150x80/EEEEEE/333333?text=Viator" alt="Viator Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Viator';" />
-    <img src="https://placehold.co/150x80/EEEEEE/333333?text=GetYourGuide" alt="GetYourGuide Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=GetYourGuide';" />
-    <img src="https://placehold.co/150x80/EEEEEE/333333?text=Headout" alt="Headout Logo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Headout';" />
-  </div>
-  <p class="google-reviews" aria-label="Google review score and count">
-    Overall Rating: 5.0 <span class="material-icons" aria-hidden="true">star</span> Google (15,000+ Reviews)
-  </p>
-</section>
-
-<footer role="contentinfo">
-  <div class="footer-container">
-    <div class="footer-col" aria-label="Company info">
-      <h3>About Us</h3>
-      <p>The Perfect Vacation is dedicated to crafting immersive travel experiences. We believe in authentic adventures and personalized service.</p>
-    </div>
-    <div class="footer-col" aria-label="Quick links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#tours">Top Tours</a></li>
-        <li><a href="#all-tours">All Tours</a></li>
-        <li><a href="#exclusive-tours">Exclusive Tours</a></li> <!-- New footer link -->
-        <li><a href="#expect">What to Expect</a></li>
-        <li><a href="#faq">FAQs</a></li>
-        <a href="blog/index.html">blogs</a>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col" aria-label="Contact and social media">
-      <h3>Contact</h3>
-      <p>Email: info@theperfectvacation.com</p>
-      <p>Phone: +1 800 123 4567</p>
-      <div class="footer-social" aria-label="Social media links">
-        <a href="#" aria-label="Follow us on Facebook" target="_blank"><span class="material-icons">facebook</span></a>
-        <a href="#" aria-label="Follow us on Instagram" target="_blank"><span class="material-icons">instagram</span></a>
-        <a href="#" aria-label="Follow us on Twitter" target="_blank"><span class="material-icons">twitter</span></a>
+  <section id="expect" class="expect" aria-labelledby="expect-title">
+    <h2 id="expect-title">What to Expect</h2>
+    <div class="expect-list">
+      <div class="expect-item">
+        <span class="material-icons expect-icon" aria-hidden="true">check_circle</span>
+        <p class="expect-text">Carefully curated itineraries tailored to your interests.</p>
+      </div>
+      <div class="expect-item">
+        <span class="material-icons expect-icon" aria-hidden="true">check_circle</span>
+        <p class="expect-text">Passionate guides that bring the destination to life.</p>
+      </div>
+      <div class="expect-item">
+        <span class="material-icons expect-icon" aria-hidden="true">check_circle</span>
+        <p class="expect-text">Convenience and peace of mind with comprehensive planning.</p>
+      </div>
+      <div class="expect-item">
+        <span class="material-icons expect-icon" aria-hidden="true">check_circle</span>
+        <p class="expect-text">Interactive experiences that connect you with locals.</p>
       </div>
     </div>
-    <div class="footer-col" aria-label="Newsletter signup">
-      <h3>Newsletter</h3>
-      <form action="#" method="post" aria-label="Subscribe to newsletter form">
-        <input type="email" name="email" placeholder="Your email" aria-label="Email address" required />
-        <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
-      </form>
+  </section>
+
+  <section id="faq" class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="q1">What are the must-see landmarks on
+        your tours?</button>
+      <div class="faq-answer" id="faq1" role="region" aria-labelledby="q1" hidden>
+        <p>Our tours highlight iconic sites like the Eiffel Tower, Louvre Museum, Montmartre, and the Seine River
+          cruise, plus hidden gems only locals know.</p>
+      </div>
     </div>
-  </div>
-  <div class="footer-bottom" aria-live="polite">
-    <p>&copy; 2025 The Perfect Vacation by <a href="https://shabreznoorani.com" target="_blank"
-						rel="noopener noreferrer"> Shabrez Noorani</p>
-  </div>
-</footer>
 
-<script>
-  // Mobile menu toggle
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const mobileNav = document.getElementById('mobile-menu');
-  toggleBtn.addEventListener('click', () => {
-    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-    toggleBtn.setAttribute('aria-expanded', String(!expanded));
-    mobileNav.classList.toggle('show');
-  });
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="q2">Are your tours suitable for
+        families?</button>
+      <div class="faq-answer" id="faq2" role="region" aria-labelledby="q2" hidden>
+        <p>Yes! We offer family-friendly options with engaging activities for all ages, including kid-focused tours and
+          flexible schedules.</p>
+      </div>
+    </div>
 
-  // FAQ accordion toggle
-  document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-      const expanded = question.getAttribute('aria-expanded') === 'true';
-      const targetAnswer = document.getElementById(question.getAttribute('aria-controls'));
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="q3">When is the best time to
+        book?</button>
+      <div class="faq-answer" id="faq3" role="region" aria-labelledby="q3" hidden>
+        <p>We recommend booking early for peak seasons from Spring through Fall to secure preferred dates and
+          experiences.</p>
+      </div>
+    </div>
+  </section>
 
-      // Close all FAQs if one is open, unless clicking the same one again
-      document.querySelectorAll('.faq-question').forEach(q => {
-        const qAnswer = document.getElementById(q.getAttribute('aria-controls'));
-        if (q !== question && q.getAttribute('aria-expanded') === 'true') {
-          q.setAttribute('aria-expanded', 'false');
-          qAnswer.classList.remove('open');
-          qAnswer.hidden = true;
+  <!-- Our Partners Section -->
+  <section id="our-partners" class="our-partners" aria-labelledby="partners-title">
+    <h2 id="partners-title">Our Trusted Partners</h2>
+    <div class="partner-logos">
+      <img src="https://placehold.co/150x80/EEEEEE/333333?text=Tripadvisor" alt="Tripadvisor Logo" loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Tripadvisor';" />
+      <img src="https://placehold.co/150x80/EEEEEE/333333?text=Viator" alt="Viator Logo" loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Viator';" />
+      <img src="https://placehold.co/150x80/EEEEEE/333333?text=GetYourGuide" alt="GetYourGuide Logo" loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=GetYourGuide';" />
+      <img src="https://placehold.co/150x80/EEEEEE/333333?text=Headout" alt="Headout Logo" loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/150x80/EEEEEE/333333?text=Headout';" />
+    </div>
+    <p class="google-reviews" aria-label="Google review score and count">
+      Overall Rating: 5.0 <span class="material-icons" aria-hidden="true">star</span> Google (15,000+ Reviews)
+    </p>
+  </section>
+
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-col" aria-label="Company info">
+        <h3>About Us</h3>
+        <p>The Perfect Vacation is dedicated to crafting immersive travel experiences. We believe in authentic
+          adventures and personalized service.</p>
+      </div>
+      <div class="footer-col" aria-label="Quick links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#tours">Top Tours</a></li>
+          <li><a href="#all-tours">All Tours</a></li>
+          <li><a href="#exclusive-tours">Exclusive Tours</a></li> <!-- New footer link -->
+          <li><a href="#expect">What to Expect</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <a href="blog/index.html">blogs</a>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" aria-label="Contact and social media">
+        <h3>Contact</h3>
+        <p>Email: info@theperfectvacation.com</p>
+        <p>Phone: +1 800 123 4567</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" aria-label="Follow us on Facebook" target="_blank"><span
+              class="material-icons">facebook</span></a>
+          <a href="#" aria-label="Follow us on Instagram" target="_blank"><span
+              class="material-icons">instagram</span></a>
+          <a href="#" aria-label="Follow us on Twitter" target="_blank"><span class="material-icons">twitter</span></a>
+        </div>
+      </div>
+      <div class="footer-col" aria-label="Newsletter signup">
+        <h3>Newsletter</h3>
+        <form action="#" method="post" aria-label="Subscribe to newsletter form">
+          <input type="email" name="email" placeholder="Your email" aria-label="Email address" required />
+          <button type="submit" aria-label="Subscribe to newsletter">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom" aria-live="polite">
+      <p>&copy; 2025 The Perfect Vacation by <a href="https://shabreznoorani.com" target="_blank"
+          rel="noopener noreferrer"> Shabrez Noorani</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const mobileNav = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => {
+      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileNav.classList.toggle('show');
+    });
+
+    // FAQ accordion toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const expanded = question.getAttribute('aria-expanded') === 'true';
+        const targetAnswer = document.getElementById(question.getAttribute('aria-controls'));
+
+        // Close all FAQs if one is open, unless clicking the same one again
+        document.querySelectorAll('.faq-question').forEach(q => {
+          const qAnswer = document.getElementById(q.getAttribute('aria-controls'));
+          if (q !== question && q.getAttribute('aria-expanded') === 'true') {
+            q.setAttribute('aria-expanded', 'false');
+            qAnswer.classList.remove('open');
+            qAnswer.hidden = true;
+          }
+        });
+
+        // Toggle the clicked FAQ
+        if (!expanded) {
+          question.setAttribute('aria-expanded', 'true');
+          targetAnswer.classList.add('open');
+          targetAnswer.hidden = false;
+        } else {
+          question.setAttribute('aria-expanded', 'false');
+          targetAnswer.classList.remove('open');
+          targetAnswer.hidden = true;
         }
       });
-
-      // Toggle the clicked FAQ
-      if (!expanded) {
-        question.setAttribute('aria-expanded', 'true');
-        targetAnswer.classList.add('open');
-        targetAnswer.hidden = false;
-      } else {
-        question.setAttribute('aria-expanded', 'false');
-        targetAnswer.classList.remove('open');
-        targetAnswer.hidden = true;
-      }
     });
-  });
-</script>
+  </script>
 
 </body>
+
 </html>
