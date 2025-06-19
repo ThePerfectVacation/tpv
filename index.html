@@ -4,27 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1" />
-  <meta name="theme-color" content="#8B0000" /> <title>Best guided tours paris - The Perfect Vacation</title>
+  <meta name="theme-color" content="#8B0000" />
+  <title>Best guided tours paris - The Perfect Vacation</title>
 
+  <!-- Canonical URL for SEO: Replace with the actual URL of this page -->
   <link rel="canonical" href="https://theperfectvacation.fr" />
 
+  <!-- Meta Description for SEO -->
   <meta name="description"
     content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
 
+  <!-- Open Graph Meta Tags for Social Media Sharing -->
   <meta property="og:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
   <meta property="og:description"
     content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://theperfectvacation.fr" />
   <meta property="og:image" content="https://theperfectvacation.fr" />
+  <!-- Replace with a relevant image for social sharing -->
   <meta property="og:site_name" content="The Perfect Vacation" />
 
+  <!-- Twitter Card Meta Tags for Twitter Sharing -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
   <meta name="twitter:description"
     content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
   <meta name="twitter:image" content="https://www.yourdomain.com/assets/images/hero-image-twitter.jpg" />
+  <!-- Replace with a relevant image for Twitter sharing -->
+
+
+  <!-- Using Google Fonts for Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Material Icons for icons (e.g., star, menu) -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style>
@@ -275,12 +286,14 @@
       /* Darker shadow for text */
     }
 
-    /* CHANGE 1: Make hero paragraph visible */
+    /* Make hero paragraph visible */
     .hero-content p {
       font-weight: 600;
       font-size: 1.25rem;
-      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9); /* Increased shadow for better visibility */
-      color: #FFFFFF; /* Ensure text color is white for contrast */
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+      /* Increased shadow for better visibility */
+      color: #FFFFFF;
+      /* Ensure text color is white for contrast */
     }
 
     /* Tours Grid */
@@ -492,8 +505,9 @@
       /* Very light grey background for this section */
       padding: 0rem 2rem;
       max-width: 960px;
-      /* CHANGE 2: Reduce top margin for "What to Expect" */
-      margin: 0.2rem auto; /* Reduced from 3rem remember .. */
+      /* Reduced top margin for "What to Expect" */
+      margin: 0.2rem auto;
+      /* Reduced from 3rem */
       border-radius: 16px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       /* Lighter shadow */
@@ -832,46 +846,48 @@
       /* Brighter red on hover */
     }
 
-    /* Our Partners Section */
+    /* Our Partners Section - Styling for beauty and mobile horizontal layout */
     section.our-partners {
-      padding: 3rem 2rem;
+      padding: 4rem 2rem; /* Increased padding for more breathing room */
       max-width: 1200px;
-      /* CHANGE 2: Reduce top margin for "Our Trusted Partners" */
-      margin: 1.5rem auto; /* Reduced from 3rem */
+      margin: 1.5rem auto;
       text-align: center;
       background-color: #F8F8F8;
-      /* Light background */
       border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* More prominent shadow */
     }
 
     section.our-partners h2 {
       color: #8B0000;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem; /* Slightly more space below heading */
     }
 
     .partner-logos {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: wrap; /* Default to wrap for larger screens */
       justify-content: center;
       align-items: center;
-      gap: 2rem;
+      gap: 3rem; /* Increased gap between logos */
       margin-bottom: 2rem;
+      padding: 1rem; /* Added padding inside the logos container */
+      border: 1px solid #E0E0E0; /* Subtle border for definition */
+      border-radius: 12px;
+      background-color: #FFFFFF; /* White background for the logo container */
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Inner shadow for depth */
     }
 
     .partner-logos img {
-      max-width: 150px;
-      height: auto;
-      filter: grayscale(80%);
-      /* Make logos grayscale to fit theme */
-      opacity: 0.7;
-      transition: filter 0.3s ease, opacity 0.3s ease;
+      max-width: 160px; /* Slightly larger on desktop */
+      height: 70px; /* Fixed height for better alignment, adjust as needed */
+      object-fit: contain; /* Ensures the entire logo is visible without cropping */
+      /* Removed default grayscale and opacity */
+      transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
     }
 
     .partner-logos img:hover {
-      filter: grayscale(0%);
-      /* Color on hover */
-      opacity: 1;
+      transform: scale(1.08); /* Slightly larger on hover */
+      filter: none; /* Full color on hover */
+      opacity: 1; /* Full opacity on hover */
     }
 
     .google-reviews {
@@ -882,6 +898,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
+      margin-top: 2rem; /* Added space above reviews */
     }
 
     .google-reviews .material-icons {
@@ -890,16 +907,47 @@
       font-size: 1.5rem;
     }
 
-    /* CHANGE 3: Make partner logos horizontal on mobile */
-    @media (max-width: 600px) { /* Adjust breakpoint as needed */
-        .partner-logos {
-            flex-direction: row; /* Ensure horizontal layout */
-            justify-content: center; /* Center them */
-            flex-wrap: wrap; /* Allow wrapping if too many logos */
-        }
-        .partner-logos img {
-            max-width: 100px; /* Slightly smaller on very small screens */
-        }
+    /* Mobile specific styles for partner logos */
+    @media (max-width: 768px) {
+      .partner-logos {
+        flex-direction: row;
+        justify-content: flex-start;
+        /* Align items to the start for horizontal scroll */
+        flex-wrap: nowrap;
+        /* Force logos into a single line */
+        overflow-x: auto;
+        /* Enable horizontal scrolling if content overflows */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
+        padding-bottom: 10px;
+        /* Space for scrollbar if visible */
+        scroll-snap-type: x mandatory;
+        /* Enable snap points for smoother scrolling experience */
+        gap: 1.5rem; /* Reduced gap on mobile */
+      }
+
+      /* Hide scrollbar for aesthetic purposes on mobile */
+      .partner-logos::-webkit-scrollbar {
+        display: none;
+      }
+
+      .partner-logos {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+
+      .partner-logos img {
+        flex-shrink: 0;
+        /* Prevent logos from shrinking too much */
+        max-width: 90px;
+        /* Smaller max-width for mobile to allow more logos on screen */
+        height: 60px; /* Fixed height for better alignment on mobile */
+        object-fit: contain;
+        scroll-snap-align: center;
+        /* Snap individual logos to the center when scrolling */
+      }
     }
   </style>
 </head>
@@ -914,7 +962,8 @@
     <nav class="primary-nav" role="navigation" aria-label="Primary navigation">
       <a href="#tours">Top Tours</a>
       <a href="#all-tours">All Tours</a>
-      <a href="#exclusive-tours">Book now</a> <a href="#expect">What to Expect</a>
+      <a href="#exclusive-tours">Book now</a>
+      <a href="#expect">What to Expect</a>
       <a href="#faq">FAQs</a>
       <a href="blog/index.html">Blogs</a>
       <a href="#contact">Contact</a>
@@ -923,7 +972,8 @@
   <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile menu">
     <a href="#tours">Top Tours</a>
     <a href="#all-tours">All Tours</a>
-    <a href="#exclusive-tours">Book now</a> <a href="#expect">What to Expect</a>
+    <a href="#exclusive-tours">Book now</a>
+    <a href="#expect">What to Expect</a>
     <a href="blog/index.html">Blogs</a>
     <a href="#faq">FAQs</a>
     <a href="#contact">Contact</a>
@@ -941,11 +991,11 @@
     <div class="tours-grid">
       <article class="tour-card" tabindex="0" aria-describedby="desc-tour-sainte-chapelle-notre-dame" role="region">
         <img src="assets/images/notredame.svg" alt="Notre Dame Outdoor walking tour with Entry to Saint Chapelle"
-          loading="lazy"
-          onerror="this.onerror=null;this.src='assets/images/notredame.svg';" />
+          loading="lazy" onerror="this.onerror=null;this.src='assets/images/notredame.svg';" />
         <div class="tour-content">
           <h3 class="tour-title">Notre Dame Outdoor Walking Tour with Entry to Saint Chapelle</h3>
-          <p id="desc-tour-sainte-chapelle-notre-dame" class="tour-desc">Highly Rated & Recommended by Travelers on GetYourGuide & TripAdvisor</p>
+          <p id="desc-tour-sainte-chapelle-notre-dame" class="tour-desc">Highly Rated & Recommended by Travelers on
+            GetYourGuide & TripAdvisor</p>
           <div class="tour-meta" aria-label="Rating and price details">
             <div class="tour-rating" aria-label="Rating: 5 out of 5 stars">
               4.9 <span class="material-icons" aria-hidden="true">star</span>
@@ -953,13 +1003,13 @@
             </div>
             <div class="tour-price" aria-label="Price from 30 Euros">€64</div>
           </div>
-          <button class="book-btn" aria-label="Book ND Outdoor walking tour with Skip the line saint chapelle">Book Now</button>
+          <button class="book-btn" aria-label="Book ND Outdoor walking tour with Skip the line saint chapelle">Book
+            Now</button>
         </div>
       </article>
 
       <article class="tour-card" tabindex="0" aria-describedby="desc-tour-eiffel-elevator" role="region">
-        <img src="assets/images/eiffeltower.svg" alt="Eiffel Tower tour photo"
-          loading="lazy"
+        <img src="assets/images/eiffeltower.svg" alt="Eiffel Tower tour photo" loading="lazy"
           onerror="this.onerror=null;this.src='assets/images/eiffeltower.svg';" />
         <div class="tour-content">
           <h3 class="tour-title">Eiffel Tower Climb</h3>
@@ -977,8 +1027,7 @@
       </article>
 
       <article class="tour-card" tabindex="0" aria-describedby="desc-tour-louvre" role="region">
-        <img src="assets/images/crypte.svg" alt="Crypte Archaeological Museum tour photo"
-          loading="lazy"
+        <img src="assets/images/crypte.svg" alt="Crypte Archaeological Museum tour photo" loading="lazy"
           onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
         <div class="tour-content">
           <h3 class="tour-title">Notre Dame Outdoor Walking Tour with Entry to Crypte</h3>
@@ -1002,8 +1051,7 @@
     <div class="tours-grid">
       <article class="tour-card as-link" tabindex="0" role="region">
         <a href="https://theperfectvacation.fr/notredame-tours.html" aria-label="Notre Dame walking tour">
-          <img src="assets/images/notredame.svg"
-            alt="Notre Dame Outdoor walking tour" loading="lazy"
+          <img src="assets/images/notredame.svg" alt="Notre Dame Outdoor walking tour" loading="lazy"
             onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
           <div class="tour-content">
             <h3 class="tour-title">Notre Dame and Saint Chapelle walking tour</h3>
@@ -1021,8 +1069,7 @@
 
       <article class="tour-card as-link" tabindex="0" role="region">
         <a href="https://theperfectvacation.fr/sacrecouer-tours.html" aria-label="View details for Montmartre Walking Tour">
-          <img src="assets/images/montmartre.svg"
-            alt="montmartre night time" loading="lazy"
+          <img src="assets/images/montmartre.svg" alt="montmartre night time" loading="lazy"
             onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
           <div class="tour-content">
             <h3 class="tour-title">Montmartre Walking Tour</h3>
@@ -1041,8 +1088,7 @@
 
       <article class="tour-card as-link" tabindex="0" role="region">
         <a href="https://theperfectvacation.fr/montparnasse-tour.html" aria-label="View details for Versailles Day Trip">
-          <img src="assets/images/montparnasse.svg"
-            alt="Palace of Versailles gardens" loading="lazy"
+          <img src="assets/images/montparnasse.svg" alt="Palace of Versailles gardens" loading="lazy"
             onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
           <div class="tour-content">
             <h3 class="tour-title">Montparnasse</h3>
@@ -1060,10 +1106,8 @@
       </article>
 
       <article class="tour-card as-link" tabindex="0" role="region">
-        <a href="https://theperfectvacation.fr/eiffeltower-tours.html"
-          aria-label="Eiffel tower climbing tour details">
-          <img src="assets/images/eiffeltowersunset.svg"
-            alt="Eiffel Tower" loading="lazy"
+        <a href="https://theperfectvacation.fr/eiffeltower-tours.html" aria-label="Eiffel tower climbing tour details">
+          <img src="assets/images/eiffeltowersunset.svg" alt="Eiffel Tower" loading="lazy"
             onerror="this.onerror=null;this.src='assets/images/eiffeltowersunset';" />
           <div class="tour-content">
             <h3 class="tour-title">Eiffel Tower Climbing tour</h3>
@@ -1082,8 +1126,7 @@
       <article class="tour-card as-link" tabindex="0" role="region">
         <a href="https://theperfectvacation.fr/arcdetriomphe-tours.html"
           aria-label="View details for Paris arc de trimphe Exclusive">
-          <img src="assets/images/arcdetriomphe.svg"
-            alt="Skulls and bones in Paris Catacombs" loading="lazy"
+          <img src="assets/images/arcdetriomphe.svg" alt="Skulls and bones in Paris Catacombs" loading="lazy"
             onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
           <div class="tour-content">
             <h3 class="tour-title">Arc de Triomphe</h3>
@@ -1101,10 +1144,8 @@
       </article>
 
       <article class="tour-card as-link" tabindex="0" role="region">
-        <a href="#"
-          aria-label="View details for D-Day Normandy Beaches Day Trip">
-          <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Coming+soon"
-            alt="Coming soon" loading="lazy"
+        <a href="#" aria-label="View details for D-Day Normandy Beaches Day Trip">
+          <img src="https://placehold.co/400x250/AAAAAA/8B0000?text=Coming+soon" alt="Coming soon" loading="lazy"
             onerror="this.onerror=null;this.src='https://placehold.co/400x250/AAAAAA/8B0000?text=Image+Unavailable';" />
           <div class="tour-content">
             <h3 class="tour-title">coming soon</h3>
@@ -1375,6 +1416,7 @@
     </div>
   </section>
 
+  <!-- Our Partners Section -->
   <section id="our-partners" class="our-partners" aria-labelledby="partners-title">
     <h2 id="partners-title">Our Trusted Partners</h2>
     <div class="partner-logos">
@@ -1404,7 +1446,8 @@
         <ul>
           <li><a href="#tours">Top Tours</a></li>
           <li><a href="#all-tours">All Tours</a></li>
-          <li><a href="#exclusive-tours">Book now</a></li> <li><a href="#expect">What to Expect</a></li>
+          <li><a href="#exclusive-tours">Book now</a></li>
+          <li><a href="#expect">What to Expect</a></li>
           <li><a href="#faq">FAQs</a></li>
           <a href="blog/index.html">Blogs</a>
           <li><a href="#contact">Contact</a></li>
@@ -1412,7 +1455,7 @@
       </div>
       <div class="footer-col" aria-label="Contact and social media">
         <h3>Contact</h3>
-       <p>Email: <a href="mailto:theperfectmanagement.fr@gmail.com">theperfectmanagement.fr@gmail.com</a></p>
+        <p>Email: <a href="mailto:theperfectmanagement.fr@gmail.com">theperfectmanagement.fr@gmail.com</a></p>
         <p>Phone:+33 7 45 70 57 42</p>
         <div class="footer-social" aria-label="Social media links">
           <a href="#" aria-label="Follow us on Facebook" target="_blank"><span
