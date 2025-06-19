@@ -4,38 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=1" />
-  <meta name="theme-color" content="#8B0000" /> <!-- Updated theme color to dark red -->
-  <title>Best guided tours paris - The Perfect Vacation</title>
+  <meta name="theme-color" content="#8B0000" /> <title>Best guided tours paris - The Perfect Vacation</title>
 
-  <!-- Canonical URL for SEO: Replace with the actual URL of this page -->
   <link rel="canonical" href="https://theperfectvacation.fr" />
 
-  <!-- Meta Description for SEO -->
   <meta name="description"
     content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
 
-  <!-- Open Graph Meta Tags for Social Media Sharing -->
   <meta property="og:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
   <meta property="og:description"
     content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://theperfectvacation.fr" />
   <meta property="og:image" content="https://theperfectvacation.fr" />
-  <!-- Replace with a relevant image for social sharing -->
   <meta property="og:site_name" content="The Perfect Vacation" />
 
-  <!-- Twitter Card Meta Tags for Twitter Sharing -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Perfect Vacation - Exceptional Tours & Experiences" />
   <meta name="twitter:description"
     content="Discover your dream getaway with The Perfect Vacation. Custom curated tours, unforgettable experiences, and expert-guided adventures await." />
   <meta name="twitter:image" content="https://www.yourdomain.com/assets/images/hero-image-twitter.jpg" />
-  <!-- Replace with a relevant image for Twitter sharing -->
-
-
-  <!-- Using Google Fonts for Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <!-- Material Icons for icons (e.g., star, menu) -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style>
@@ -286,10 +275,12 @@
       /* Darker shadow for text */
     }
 
+    /* CHANGE 1: Make hero paragraph visible */
     .hero-content p {
       font-weight: 600;
       font-size: 1.25rem;
-      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9); /* Increased shadow for better visibility */
+      color: #FFFFFF; /* Ensure text color is white for contrast */
     }
 
     /* Tours Grid */
@@ -501,7 +492,8 @@
       /* Very light grey background for this section */
       padding: 3rem 2rem;
       max-width: 960px;
-      margin: 3rem auto;
+      /* CHANGE 2: Reduce top margin for "What to Expect" */
+      margin: 0.2rem auto; /* Reduced from 3rem */
       border-radius: 16px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       /* Lighter shadow */
@@ -844,7 +836,8 @@
     section.our-partners {
       padding: 3rem 2rem;
       max-width: 1200px;
-      margin: 3rem auto;
+      /* CHANGE 2: Reduce top margin for "Our Trusted Partners" */
+      margin: 1.5rem auto; /* Reduced from 3rem */
       text-align: center;
       background-color: #F8F8F8;
       /* Light background */
@@ -896,6 +889,18 @@
       /* Dark red stars */
       font-size: 1.5rem;
     }
+
+    /* CHANGE 3: Make partner logos horizontal on mobile */
+    @media (max-width: 600px) { /* Adjust breakpoint as needed */
+        .partner-logos {
+            flex-direction: row; /* Ensure horizontal layout */
+            justify-content: center; /* Center them */
+            flex-wrap: wrap; /* Allow wrapping if too many logos */
+        }
+        .partner-logos img {
+            max-width: 100px; /* Slightly smaller on very small screens */
+        }
+    }
   </style>
 </head>
 
@@ -909,8 +914,7 @@
     <nav class="primary-nav" role="navigation" aria-label="Primary navigation">
       <a href="#tours">Top Tours</a>
       <a href="#all-tours">All Tours</a>
-      <a href="#exclusive-tours">Book now</a> <!-- New nav link -->
-      <a href="#expect">What to Expect</a>
+      <a href="#exclusive-tours">Book now</a> <a href="#expect">What to Expect</a>
       <a href="#faq">FAQs</a>
       <a href="blog/index.html">Blogs</a>
       <a href="#contact">Contact</a>
@@ -919,8 +923,7 @@
   <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile menu">
     <a href="#tours">Top Tours</a>
     <a href="#all-tours">All Tours</a>
-    <a href="#exclusive-tours">Book now</a> <!-- New nav link -->
-    <a href="#expect">What to Expect</a>
+    <a href="#exclusive-tours">Book now</a> <a href="#expect">What to Expect</a>
     <a href="blog/index.html">Blogs</a>
     <a href="#faq">FAQs</a>
     <a href="#contact">Contact</a>
@@ -942,7 +945,7 @@
           onerror="this.onerror=null;this.src='assets/images/notredame.svg';" />
         <div class="tour-content">
           <h3 class="tour-title">Notre Dame Outdoor Walking Tour with Entry to Saint Chapelle</h3>
-          <p id="desc-tour-sainte-chapelle-notre-dame" class="tour-desc">Highly Rated & Recommended by Travelers on GetYourGuide & TripAdvisor</p> 
+          <p id="desc-tour-sainte-chapelle-notre-dame" class="tour-desc">Highly Rated & Recommended by Travelers on GetYourGuide & TripAdvisor</p>
           <div class="tour-meta" aria-label="Rating and price details">
             <div class="tour-rating" aria-label="Rating: 5 out of 5 stars">
               4.9 <span class="material-icons" aria-hidden="true">star</span>
@@ -994,7 +997,6 @@
     </div>
   </section>
 
-  <!-- Existing All Tours Section (remains as clickable cards) -->
   <section id="all-tours" class="tours" aria-label="All Available Tours">
     <h2>All Tours</h2>
     <div class="tours-grid">
@@ -1120,7 +1122,6 @@
     </div>
   </section>
 
-  <!-- New: Exclusive Tours Section (Carousel) -->
   <section id="exclusive-tours" class="tours exclusive-tours-section" aria-label="Exclusive Tours">
     <h2>All Our Tours</h2>
     <div class="tours-grid tours-carousel">
@@ -1374,7 +1375,6 @@
     </div>
   </section>
 
-  <!-- Our Partners Section -->
   <section id="our-partners" class="our-partners" aria-labelledby="partners-title">
     <h2 id="partners-title">Our Trusted Partners</h2>
     <div class="partner-logos">
@@ -1404,10 +1404,9 @@
         <ul>
           <li><a href="#tours">Top Tours</a></li>
           <li><a href="#all-tours">All Tours</a></li>
-          <li><a href="#exclusive-tours">Book now</a></li> <!-- New footer link -->
-          <li><a href="#expect">What to Expect</a></li>
+          <li><a href="#exclusive-tours">Book now</a></li> <li><a href="#expect">What to Expect</a></li>
           <li><a href="#faq">FAQs</a></li>
-          <a href="blog/index.html">blogs</a>
+          <a href="blog/index.html">Blogs</a>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
